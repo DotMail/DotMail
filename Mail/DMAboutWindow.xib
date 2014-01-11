@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <development version="5000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DMAboutWindowController">
+            <connections>
+                <outlet property="window" destination="82" id="94"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="82" customClass="DMAboutWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="109" y="138" width="300" height="320"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <view key="contentView" id="83">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="84" customClass="DMAboutBackgroundView">
+                        <rect key="frame" x="0.0" y="-30" width="300" height="350"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <imageView id="87">
+                                <rect key="frame" x="113" y="265" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" controlSize="mini" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DotMailIcns" id="88"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" id="86">
+                                <rect key="frame" x="-3" y="234" width="306" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title=".Mail" id="89">
+                                    <font key="font" size="18" name="HelveticaNeue-Bold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" id="85">
+                                <rect key="frame" x="-3" y="207" width="306" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="DotMail - v0.1 (5000)" id="90">
+                                    <font key="font" size="13" name="HelveticaNeue"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-3" name="displayPatternValue3" keyPath="self.delegate.bundleVersionNumber" previousBinding="Iow-Ou-jT2" id="Zs9-8b-vRg">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayPattern">%{value1}@ - v%{value2}@  (%{value3}@)</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="-3" name="displayPatternValue2" keyPath="self.delegate.shortVersionNumber" previousBinding="Jbp-OX-Zob" id="Iow-Ou-jT2">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayPattern">%{value1}@ - v%{value2}@  (%{value3}@)</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="-3" name="displayPatternValue1" keyPath="self.delegate.versionColloquialName" id="Jbp-OX-Zob">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayPattern">%{value1}@ - v%{value2}@  (%{value3}@)</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="95">
+                                <rect key="frame" x="50" y="46" width="200" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="96">
+                                    <font key="font" size="11" name="HelveticaNeue"/>
+                                    <string key="title">Special thanks to:
+Jonathan Willing, Mattias Schleiden, DINH Viet Hoa, Matt Ronge,  and Conner Bender</string>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="97">
+                                <rect key="frame" x="50" y="114" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="98">
+                                    <font key="font" size="11" name="HelveticaNeue"/>
+                                    <string key="title">Developed by:
+Robert Widmann</string>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="99">
+                                <rect key="frame" x="50" y="152" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="100">
+                                    <font key="font" size="11" name="HelveticaNeue"/>
+                                    <string key="title">Designed by:
+Tobias van Schneider</string>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+        </window>
+        <userDefaultsController id="cDB-h8-AAv"/>
+    </objects>
+    <resources>
+        <image name="DotMailIcns" width="512" height="512"/>
+    </resources>
+</document>

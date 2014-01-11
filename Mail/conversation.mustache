@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<script type="text/ecmascript" src="{{CONVERSATION_COMPILED_JS_URL}}"></script>
+		<link href="{{CONVERSATION_CSS_URL}}" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body id="MainBody">
+		<img src="BodyStar.png" style="display:none" alt=""/>
+		<img src="ReplyButton.png" style="display:none" alt=""/>
+		<img src="BodyNextStep.png" style="display:none" alt=""/>
+		<img src="QuickReplyCancel.png" style="display:none" alt=""/>
+		
+		<img src="forward.png" style="display:none" alt=""/>
+		<img src="forwardNormal.png" style="display:none" alt=""/>
+		<img src="forwardActive.png" style="display:none" alt=""/>
+		<img src="reply.png" style="display:none" alt=""/>
+		<img src="replyNormal.png" style="display:none" alt=""/>
+		<img src="replyActive.png" style="display:none" alt=""/>
+		<img src="replyall.png" style="display:none" alt=""/>
+		<img src="replyallNormal.png" style="display:none" alt=""/>
+		<img src="replyallActive.png" style="display:none" alt=""/>
+		
+		<div id="main-body">
+			<div id="TopMailContents">
+				<header class="top-header">
+					<div id="conversation-subject">
+						<div class="top-sender-image"><div><img src="{{BASE_64_IMAGE_DATA}}" width="46px" height="46px" /></div></div>
+						<div id="title" class="top-subject">{{CONVERSATION_SUBJECT}}</div>
+						<div class="subject-subline">
+							<span class="subject-main-sender">{{SENDERS_NAMES}}</span>
+							to <span class="subject-first-address">{{OUR_EMAIL}}</span>
+							{{#CCD_TO_OTHERS}}
+							and <span class="subject-more-people">{{NUMBER_CCD_TO}} others</span>
+							{{/CCD_TO_OTHERS}}
+						</div>
+						<div class="top-action-buttons">
+							<div class="top-options-toggle" onclick="showMenu(event, '')"></div>
+						</div>
+						<div id="labels">
+						</div>
+					</div>
+				</header>
+				<div id="Messages">
+					{{FIRST_CONVERSATION_MESSAGE}}
+					{{OTHER_CONVERSATION_MESSAGES}}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

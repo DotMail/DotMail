@@ -1,0 +1,27 @@
+/* Localized versions of Info.plist keys */
+
+"YearKey" = "a year";
+
+"YearsKey" = "years";
+
+"DayKey" = "day";
+
+"DaysKey" = "days";
+
+"HoursKey" = "hours";
+
+"HourKey" = "an hour";
+
+"MinuteKey" = "minute";
+
+"MinutesKey" = "minutes";
+
+"SecondKey" = "a few seconds";
+
+"SecondsKey" = "seconds";
+
+"AgoKey" = "ago";
+
+"LaterKey" = "later";
+
+"AboutKey" = "about";

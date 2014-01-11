@@ -1,0 +1,24 @@
+[submodule "External/ReactiveCocoa"]
+	path = External/ReactiveCocoa
+	url = https://github.com/ReactiveCocoa/ReactiveCocoa.git
+[submodule "External/JNWCollectionView"]
+	path = External/JNWCollectionView
+	url = https://github.com/jwilling/JNWCollectionView.git
+[submodule "External/MoonShine"]
+	path = External/MoonShine
+	url = https://github.com/DotMail/MoonShine.git
+[submodule "External/Specta"]
+	path = External/Specta
+	url = https://github.com/petejkim/specta.git
+[submodule "External/Expecta"]
+	path = External/Expecta
+	url = https://github.com/petejkim/expecta.git
+[submodule "Configuration"]
+	path = Configuration
+	url = https://github.com/jspahrsummers/xcconfigs.git
+[submodule "External/TwUI"]
+	path = External/TwUI
+	url = https://github.com/CodaFi/twui.git
+[submodule "External/Puissant"]
+	path = External/Puissant
+	url = https://github.com/DotMail/Puissant.git

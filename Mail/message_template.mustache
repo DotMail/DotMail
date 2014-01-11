@@ -1,0 +1,141 @@
+<div id="MessageContainer:{{MESSAGE_ID}}" class="-dotmail-messageContainer">
+	<div id="QuickReply:{{MESSAGE_ID}}" class="-dotmail-quickReply">
+		<div id="QuickReply:{{MESSAGE_ID}}-progress" class="-dotmail-quickReplyProgress">
+			<div id="QuickReply:{{MESSAGE_ID}}-sending" class="-dotmail-quickReplySending">
+				{{CONVERSATION_QUICKREPLY_SENDING}}
+			</div>
+			<div id="QuickReply:{{MESSAGE_ID}}-sent" class="-dotmail-quickReplySent">
+				{{CONVERSATION_QUICKREPLY_SENT}}
+			</div>
+			<div class="-dotmail-separator"></div>
+		</div>
+		<div id="QuickReply:{{MESSAGE_ID}}-contents" class="-dotmail-quickReplyContents">
+			<div class="-dotmail-quickReplyTextContentsContainer" id="QuickReply:{{MESSAGE_ID}}-editor-container">
+				<div id="QuickReply:{{MESSAGE_ID}}-editor" contenteditable="true" class="-dotmail-quickReplyTextContents" onfocus="quickReplyFocus('{{MESSAGE_ID}}')" onblur="quickReplyBlur('{{MESSAGE_ID}}')">
+				</div>
+			</div>
+			<div class="-dotmail-openComposerButton" onclick="openInComposer(event, '{{MESSAGE_ID}}')">
+			</div>
+			<div class="-dotmail-quickReplyBottomContainer">
+				<div class="-dotmail-quickReplyRecipientContainer">
+					<div id="QuickReply:{{MESSAGE_ID}}-replyall" class="-dotmail-quickReplyReplyAll" onclick="toggleQuickReplyAll('{{MESSAGE_ID}}')">
+					</div>
+					<div id="QuickReply:{{MESSAGE_ID}}-replynormal" class="-dotmail-quickReplyReplyNormal" onclick="toggleQuickReplyAll('{{MESSAGE_ID}}')">
+					</div>
+					<div id="QuickReply:{{MESSAGE_ID}}-recipient" class="-dotmail-quickReplyRecipient">
+					</div>
+				</div>
+				<div id="QuickReply:{{MESSAGE_ID}}-buttonscontainer" class="-dotmail-quickReplyButtonsContainer">
+					<div id="QuickReply:{{MESSAGE_ID}}-counter" class="-dotmail-quickReplyCounter"></div>
+					<div class="-dotmail-buttonCancel" onclick="cancelQuickReplyClicked(event, '{{MESSAGE_ID}}')">
+					</div>
+					
+					<div id="QuickReply:{{MESSAGE_ID}}-sendbutton" class="-dotmail-buttonSend" onclick="sendQuickReply(event, '{{MESSAGE_ID}}')">
+						<span class="-dotmail-quickReplyButtonInner">
+							Send
+						</span>
+					</div>
+					
+					<span id="QuickReply:{{MESSAGE_ID}}-sendandarchivebutton-separator" class="-dotmail-quickReplyButtonSpace">
+					</span>
+				</div>
+			</div>
+			<div class="-dotmail-separator"></div>
+		</div>
+	</div>
+	{{#IS_FIRST_MESSAGE}}
+	<div id="Message:{{MESSAGE_ID}}" class="-dotmail-message" onmousedown="clickedOnMessage('{{MESSAGE_ID}}')">
+	{{^IS_FIRST_MESSAGE}}
+	<div id="Message:{{MESSAGE_ID}}" class="-dotmail-message" onmouseover="setReplyBarVisible('{{MESSAGE_ID}}', true)" onmouseout="setReplyBarVisible('{{MESSAGE_ID}}', false)" onmousedown="clickedOnMessage('{{MESSAGE_ID}}')">
+		<div id="Message:{{MESSAGE_ID}}-header-background" class="-dotmail-messageHeaderBackground">
+		</div>
+		{{#IS_FIRST_MESSAGE}}
+		<div id="Message:{{MESSAGE_ID}}-header" class="-dotmail-firstMessageHeader" onmousedown="noevent(event)">
+		{{^IS_FIRST_MESSAGE}}
+		<div id="Message:{{MESSAGE_ID}}-header" class="-dotmail-messageHeader" onclick="clickedOnHeader(event, '{{MESSAGE_ID}}')" onmousedown="noevent(event)">
+			<div id="Message:{{MESSAGE_ID}}-header-from" class="-dotmail-shortMessageHeader">
+				<div class="-dotmail-messageHeaderContainerLeft">
+					<div class="-dotmail-messageHeaderContentLeft" id="Message:{{MESSAGE_ID}}-header-container-left">
+						<span class="-dotmail-messageHeaderLeft" id="Message:{{MESSAGE_ID}}-header-from-left">
+							<span class="-dotmail-messageHeaderFrom" style="color: {{SHORT_FROM_COLOR}}" id="Message:{{MESSAGE_ID}}-short-from">
+								{{HTML_MESSAGE_SHORT_FROM}}
+							</span>
+						</span>
+						<span id="Message:{{MESSAGE_ID}}-recipient" class="-dotmail-messageRecipient">
+							{{#HAS_MESSAGE_SHORT_RECIPIENT}}
+							{{HTML_MESSAGE_TO_SHORT_RECIPIENT}}
+							{{/HAS_MESSAGE_SHORT_RECIPIENT}}
+						</span>
+					</div>
+				</div>
+				<div class="-dotmail-messageHeaderRight" id="Message:{{MESSAGE_ID}}-header-from-right">
+					<span class="-dotmail-messageHeaderDate">{{MESSAGE_SHORT_DATE}}</span>
+					<span id="Message:{{MESSAGE_ID}}-detailed-header-arrow" class="-dotmail-nextStepImageContainer">
+						{{^IS_FIRST_MESSAGE}}
+						<img src="BodyNextStep.png" id="testImage" class="-dotmail-nextStepImage"/>
+						{{/IS_FIRST_MESSAGE}}
+					</span>
+				</div>
+			</div>
+		{{/IS_FIRST_MESSAGE}}
+		</div>
+
+		{{#IS_FIRST_MESSAGE}}
+		<div id="Message:{{MESSAGE_ID}}-first-contents-animated" class="-dotmail-firstContentsAnimated">
+		{{^IS_FIRST_MESSAGE}}
+		<div id="Message:{{MESSAGE_ID}}-contents-animated" class="-dotmail-contentsAnimated">
+		{{/IS_FIRST_MESSAGE}}
+			<div id="Message:{{MESSAGE_ID}}-contents" class="-dotmail-contents">
+				<div class="-dotmail-horizontalScrollview" id="Message:{{MESSAGE_ID}}-horizontal-scrollview">
+					<div class="-dotmail-contentsTopSpace"></div>
+					{{#IS_FIRST_MESSAGE}}
+					<div id="Message:{{MESSAGE_ID}}-body-container" class="-dotmail-firstMessageBody" onmousedown="deselectAllAttachment()">
+					{{^IS_FIRST_MESSAGE}}
+					<div id="Message:{{MESSAGE_ID}}-body-container" class="-dotmail-messageBody" onmousedown="deselectAllAttachment()">
+					{{/IS_FIRST_MESSAGE}}
+
+						<div id="Message:{{MESSAGE_ID}}-body" class="-dotmail-messageBodyTextContents">
+							{{MESSAGE_BODY}}
+						</div>
+						
+						<div id="Message:{{MESSAGE_ID}}-attachments" class="-dotmail-messageBodyAttachments">
+						</div>
+					</div>
+				</div>
+				
+				<div id="Message:{{MESSAGE_ID}}-asdf-replybar" class="-dotmail-replyBarContainer">
+					<div>
+						<div class="-dotmail-replyBar">
+							<div class="-dotmail-replyBarRightButtonsContainer">
+																
+								<div class="-dotmail-bottomButton" onclick="replyall(event, '{{MESSAGE_ID}}')">
+									<div class="-dotmail-bottomReplyAllButton">
+										<span class="-dotmail-bottomButtonReposition">
+											Reply All
+										</span>
+									</div>
+								</div>								
+								<div class="-dotmail-bottomButton" onclick="showQuickReply('{{MESSAGE_ID}}')">
+									<div class="-dotmail-bottomReplyButton">
+										<span class="-dotmail-bottomButtonReposition">
+											Reply
+										</span>
+									</div>
+								</div>
+								<div class="-dotmail-bottomButton" onclick="forward(event, '{{MESSAGE_ID}}')">
+									<div class="-dotmail-bottomForwardButton">
+										<span class="-dotmail-bottomButtonReposition">
+											Forward
+										</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="-dotmail-separator"></div>
+	</div>
+</div>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <development version="5000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DMComposeWindowController"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="809" customClass="DMComposeWindowController"/>
+        <window title="New Message" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="none" id="1">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" documentModal="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" managed="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="750" height="508"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="750" height="508"/>
+            <view key="contentView" id="2" customClass="CFIComposeView">
+                <rect key="frame" x="0.0" y="0.0" width="750" height="508"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="17" customClass="CFIToolbar">
+                        <rect key="frame" x="0.0" y="461" width="750" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <button id="220">
+                                <rect key="frame" x="650" y="13" width="81" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="SendBtn" imagePosition="only" alignment="center" imageScaling="axesIndependently" inset="2" id="221" customClass="CFISendButtonCell">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="HelveticaNeue"/>
+                                </buttonCell>
+                            </button>
+                            <button id="223">
+                                <rect key="frame" x="15" y="12" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="AttachBtn" imagePosition="only" alignment="center" inset="2" id="224">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button id="225">
+                                <rect key="frame" x="560" y="13" width="81" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="SaveBtn" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="226" customClass="CFISaveButtonCell">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HelveticaNeue"/>
+                                </buttonCell>
+                            </button>
+                            <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="791">
+                                <rect key="frame" x="536" y="17" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
+                        </subviews>
+                    </customView>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="70">
+                        <rect key="frame" x="20" y="434" width="16" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" placeholderString="To:" id="71" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="76">
+                        <rect key="frame" x="365" y="405" width="30" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" placeholderString="Bcc:" id="77" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                            <color key="textColor" red="0.84313732389999996" green="0.86274516580000005" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="78">
+                        <rect key="frame" x="20" y="405" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" placeholderString="Cc:" id="79" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                            <color key="textColor" red="0.84313732389999996" green="0.86274516580000005" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="86">
+                        <rect key="frame" x="20" y="373" width="48" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" placeholderString="Subject:" id="87" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                            <color key="textColor" red="0.84313732389999996" green="0.86274516580000005" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="92">
+                        <rect key="frame" x="20" y="342" width="34" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" placeholderString="From:" id="93" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                            <color key="textColor" red="0.84313732389999996" green="0.86274516580000005" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="88">
+                        <rect key="frame" x="76" y="366" width="674" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" focusRingType="none" alignment="left" placeholderString="" drawsBackground="YES" id="89" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="14" name="LucidaGrande"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="777">
+                        <rect key="frame" x="59" y="336" width="691" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" refusesFirstResponder="YES" allowsUndo="NO" state="on" focusRingType="none" alignment="left" placeholderString="" drawsBackground="YES" id="778" customClass="DMCenteredTextFieldCell">
+                            <font key="font" size="14" name="LucidaGrande"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton id="616" customClass="DMPopUpButton">
+                        <rect key="frame" x="12" y="306" width="90" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" inset="2" arrowPosition="arrowAtCenter" id="620">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="12" name="HelveticaNeue"/>
+                            <menu key="menu" title="OtherViews" id="621"/>
+                        </popUpButtonCell>
+                        <connections>
+                            <binding destination="5Ra-A8-5oQ" name="selectedObject" keyPath="values" id="dih-CZ-HeO"/>
+                        </connections>
+                    </popUpButton>
+                    <popUpButton id="779" customClass="DMPopUpButton">
+                        <rect key="frame" x="76" y="338" width="671" height="26"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" inset="2" arrowPosition="arrowAtCenter" id="780">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="12" name="HelveticaNeue"/>
+                            <menu key="menu" title="OtherViews" id="781"/>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <popUpButton id="617" customClass="DMPopUpButton">
+                        <rect key="frame" x="108" y="306" width="42" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" id="618">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="12" name="HelveticaNeue"/>
+                            <menu key="menu" title="OtherViews" id="619"/>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <button id="205">
+                        <rect key="frame" x="202" y="308" width="16" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="BoldStyleBtn" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="206">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button id="214">
+                        <rect key="frame" x="222" y="308" width="16" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ItalicStyleBtn" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="215">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" size="13" name="Helvetica-BoldOblique"/>
+                        </buttonCell>
+                    </button>
+                    <button id="216">
+                        <rect key="frame" x="242" y="306" width="16" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="UnderlineStyleBtn" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="217">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" size="13" name="Helvetica-Bold"/>
+                        </buttonCell>
+                    </button>
+                    <button id="229">
+                        <rect key="frame" x="270" y="313" width="12" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ParagraphLeft" imagePosition="only" alignment="center" alternateImage="ParagraphLeftSelected" imageScaling="proportionallyUpOrDown" inset="2" id="230">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="alignLeft:" target="CmZ-dj-hQY" id="hai-XR-E2Q"/>
+                        </connections>
+                    </button>
+                    <button id="231">
+                        <rect key="frame" x="290" y="313" width="12" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ParagraphCenter" imagePosition="only" alignment="center" alternateImage="ParagraphCenterSelected" imageScaling="proportionallyUpOrDown" inset="2" id="232">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="alignCenter:" target="CmZ-dj-hQY" id="1I8-X3-4qH"/>
+                        </connections>
+                    </button>
+                    <button id="233">
+                        <rect key="frame" x="310" y="313" width="12" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ParagraphRight" imagePosition="only" alignment="center" alternateImage="ParagraphRightSelected" imageScaling="proportionallyUpOrDown" inset="2" id="234">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="alignRight:" target="CmZ-dj-hQY" id="eaY-vV-ieX"/>
+                        </connections>
+                    </button>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="805" customClass="DMTokenizingEmailField">
+                        <rect key="frame" x="44" y="426" width="706" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" drawsBackground="YES" id="806" customClass="MTTokenFieldCell">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="797" customClass="DMTokenizingEmailField">
+                        <rect key="frame" x="44" y="397" width="318" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" drawsBackground="YES" id="798" customClass="MTTokenFieldCell">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" id="800" customClass="DMTokenizingEmailField">
+                        <rect key="frame" x="400" y="397" width="350" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" drawsBackground="YES" id="801" customClass="MTTokenFieldCell">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textFieldCell>
+                    </textField>
+                    <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="245">
+                        <rect key="frame" x="0.0" y="427" width="750" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="748" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" red="0.92549026010000002" green="0.93333339689999995" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="246">
+                        <rect key="frame" x="0.0" y="396" width="750" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="748" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" red="0.92549026010000002" green="0.93333339689999995" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="277">
+                        <rect key="frame" x="0.0" y="365" width="750" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="748" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" red="0.92549026010000002" green="0.93333339689999995" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="278">
+                        <rect key="frame" x="0.0" y="334" width="750" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="748" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" red="0.92549026010000002" green="0.93333339689999995" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" id="249">
+                        <rect key="frame" x="0.0" y="304" width="750" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="748" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" red="0.92549026010000002" green="0.93333339689999995" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <colorWell bordered="NO" id="765" customClass="MKColorWell">
+                        <rect key="frame" x="162" y="308" width="13" height="4"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                    <button id="772">
+                        <rect key="frame" x="162" y="311" width="13" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" title="A" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="773">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                        </buttonCell>
+                    </button>
+                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="EeF-55-Ta7">
+                        <rect key="frame" x="20" y="0.0" width="730" height="290"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" id="tap-hG-bDn">
+                            <rect key="frame" x="0.0" y="0.0" width="730" height="290"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="CmZ-dj-hQY">
+                                    <rect key="frame" x="0.0" y="0.0" width="730" height="290"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="730" height="290"/>
+                                    <size key="maxSize" width="730" height="10000000"/>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="730" height="290"/>
+                                    <size key="maxSize" width="730" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Fpl-NX-kG1">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="NJe-YK-DGD">
+                            <rect key="frame" x="714" y="0.0" width="16" height="290"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+            </view>
+        </window>
+        <userDefaultsController id="5Ra-A8-5oQ"/>
+    </objects>
+    <resources>
+        <image name="AttachBtn" width="14" height="19"/>
+        <image name="BoldStyleBtn" width="8" height="9"/>
+        <image name="ItalicStyleBtn" width="3" height="9"/>
+        <image name="ParagraphCenter" width="12" height="11"/>
+        <image name="ParagraphCenterSelected" width="12" height="11"/>
+        <image name="ParagraphLeft" width="12" height="11"/>
+        <image name="ParagraphLeftSelected" width="12" height="11"/>
+        <image name="ParagraphRight" width="12" height="11"/>
+        <image name="ParagraphRightSelected" width="12" height="11"/>
+        <image name="SaveBtn" width="80" height="26"/>
+        <image name="SendBtn" width="81" height="28"/>
+        <image name="UnderlineStyleBtn" width="9" height="12"/>
+    </resources>
+</document>

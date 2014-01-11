@@ -1,0 +1,839 @@
+div.-dotmail-message, div.-dotmail-messageExpanded {
+	position: relative;
+	background-color: #ffffff;
+	font-family: Helvetica; font-size: 13px;
+	min-height: 23px;
+}
+
+div.-dotmail-message:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F7F7F7), color-stop(99%,#EDEDED));
+}
+
+div.-dotmail-messageBody {
+	text-overflow:ellipsis;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	display: block;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	
+	overflow: visible; display:none;
+}
+
+div.-dotmail-firstMessageBody {
+	text-overflow:ellipsis;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	display: block;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	
+	overflow: visible;
+}
+
+blockquote[type=cite] {
+	border-left-style:solid;
+	border-left-color:#002162;
+	border-width:1px;
+	color:#002162;
+	margin-left:0px;
+	padding-left:10px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+body {
+	font-family: Helvetica;
+	font-size: 13px;
+	background-color: #f4f5f5;	
+	overflow: hidden;
+	margin: 0px;
+}
+
+.top-header {
+	background-color: #fff;	
+	padding-bottom: 23px;
+	border-bottom: 1px solid #dee6eb;
+}
+
+.top-subject {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 30px; 
+	width: 80%;
+	padding-left: 80px;
+	padding-top: 16px;
+}
+
+.top-action-buttons {
+	position: absolute;
+	right: 30px;
+	top: 18px;
+	width: 14;
+}
+
+.subject-subline {
+	color: #646464;
+	padding-left: 80px;
+}
+.subject-main-sender {
+	font-weight: bold;
+	color: #1f82bf;
+}
+.subject-more-people {
+	font-weight: bold;
+}
+
+.conversation-subject header {
+	width: 46px;
+	height: 46px;
+	border-radius: 26px;
+	overflow: hidden;
+	border: 3px solid #ecf0f3;
+}
+
+.top-sender-image {
+	width: 46px;
+	height: 46px;
+	position: absolute;
+	left: 19px;
+	top: 16px;
+}
+.top-sender-image div {
+	width: 46px;
+	height: 46px;
+	border-radius: 26px;
+	overflow: hidden;
+	border: 3px solid #ecf0f3;
+}
+
+div.top-quick-reply {
+	opacity: 1.0;
+	background-image: url(ReplyButton.png); background-repeat: no-repeat;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+	padding-left: 10px;
+	vertical-align: middle; display: inline-block;
+}
+
+div.top-quick-reply:hover {
+	opacity: 0.6;
+}
+
+div.top-quick-reply:active {
+	opacity: 1.0;
+}
+
+div.top-favorite {
+	opacity: 1.0;
+	background-image: url(BodyStar.png); background-repeat: no-repeat;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+	padding-left: 10px;
+	vertical-align: middle; display: inline-block;
+}
+
+div.top-favorite:hover {
+	opacity: 0.6;
+}
+
+div.top-favorite:active {
+	opacity: 1.0;
+}
+
+div.top-options-toggle {
+	opacity: 1.0;
+	background-image: url(BodyNextStep.png); background-repeat: no-repeat;
+	background-size: 14px 7px;
+	width: 14px;
+	height: 7px;
+	vertical-align: middle; display: inline-block;
+}
+
+div.top-options-toggle:hover {
+	opacity: 0.6;
+}
+
+div.top-options-toggle:active {
+	opacity: 1.0;
+}
+div.-dotmail-messageHeader, div.-dotmail-messageHeaderExpanded {
+	position: relative;
+	-webkit-user-select: none;
+	cursor: default;
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	font-size: 12px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	background-color:#f4f5f5;
+}
+
+div.-dotmail-firstMessageHeader {
+	position: relative;
+	-webkit-user-select: none;
+	cursor: default;
+	font-size: 12px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	background-color:#f4f5f5;
+}
+
+.-dotmail-firstShortMessageHeader {
+	padding: 12px 91px 12px 16px;
+	position: relative;
+	margin-top: 0px;
+	background-color: #fff;
+}
+
+.-dotmail-shortMessageHeader {
+	padding: 12px 91px 12px 16px;
+	position: relative;
+	margin-top: 0px;
+	background-color: #fff;
+}
+
+div.-dotmail-shortMessageHeader:hover {
+	background: #ffffEE;
+	-webkit-box-shadow: none;
+}
+
+
+.-dotmail-messageHeaderContainerLeft {
+	max-width: 100%;
+	min-height: 23px;
+	vertical-align: middle;
+}
+
+.-dotmail-messageHeaderContentLeft {
+	font-weight: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-transition: margin-right ease-in-out 300ms;
+	position: relative;
+	top: 5px;
+}
+
+.-dotmail-messageHeaderLeft {
+	font-weight: bold;
+	position: relative;
+	top: -1px;
+}
+
+.-dotmail-messageRecipient {
+	color: #646464;
+}
+
+.-dotmail-messageHeaderRight {
+	position: absolute;
+	top: 0px;
+	right: 40px;
+	-webkit-transition: width ease-in-out 300ms;
+}
+
+span.-dotmail-messageHeaderFrom {
+	font-weight: bold;
+	color: #1f82bf;
+	vertical-align: middle;
+}
+
+span.-dotmail-messageHeaderDate {
+	position: relative;
+	top: 14px;
+	font: 11px Helvetica;
+	font-weight: normal;
+	background: transparent;
+	color: #868686;
+}
+
+div.-dotmail-messagePreview {
+	font-weight: normal;
+	color: #a0a0a0;
+	font-family: Helvetica; font-size: 12px;
+	/* float: left; */
+	/* width: 33%;*/
+	display: none;
+	/*
+	white-space: nowrap;
+	*/
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	margin: 10px;
+	/*background-color: #ff0000; */
+	/* border: 1px solid #000; */
+	vertical-align: middle;
+}
+/*
+span.messagePreview::selection {
+	background: transparent;
+}
+*/
+
+
+span.-dotmail-messageHeaderDetailsButton {
+	display: inline;
+}
+
+div.-dotmail-messageDetailedHeaderNoArrow {
+	padding: 10px;
+	padding-bottom: 5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	background-color: #f0f0f0;
+	-webkit-border-radius: 5px;
+	
+	clear: right;
+}
+
+div.-dotmail-messageDetailedHeader {
+	/*display: none;*/
+	/*margin-top: 5px;*/
+	margin-bottom: 0px;
+	/*margin-bottom: 10px;*/
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+	top: -8px;
+	overflow: hidden;
+	height: 0px;
+	-webkit-transition: height ease-in-out 300ms;
+	
+	height: 0px; margin-top: 0px;
+}
+
+td.-dotmail-messageHeaderDetailedTitle {
+	-webkit-user-select: none;
+	cursor: default;
+	text-align: right;
+	font-weight: bold;
+	color: #808080;
+	vertical-align: top;
+	white-space: nowrap;
+	font-family: "Lucida Grande";
+	font-size: 11px;
+}
+
+td.-dotmail-messageHeaderDetailedValue {
+	font-family: "Lucida Grande"; 
+	font-size: 11px;
+	color: #000;
+}
+
+.-dotmail-messageHeaderDetailedValueString {
+	position: relative;
+	top: -3px;
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 1px;
+	height: 17px;
+}
+
+span.-dotmail-backArrow {
+	visibility: hidden;
+	float: left;
+}
+
+div.-dotmail-mainConversationView {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 1px;
+}
+
+div.-dotmail-replyBar {
+	/*background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#f3f3f3));*/
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-left: 0px;
+	margin-right: 0px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	
+	position: relative; height: 21px; margin-top: 4px;
+}
+
+.-dotmail-replyBarButton {
+	border: 1px solid #e0e0e0;
+	-webkit-border-radius:10px;
+	color: #a0a0a0;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+
+	cursor: default;
+	opacity: 0.6;
+}
+
+.-dotmail-replyBarButton:hover {
+	border: 1px solid #a0a0a0;
+	color: #505050;
+	
+	cursor: default;
+	opacity: 1;
+}
+
+.-dotmail-menuReplyButtonContainer {
+	-webkit-transition: opacity ease-in-out 300ms;
+}
+
+div#TopMailContents {
+	width: 100%;
+}
+
+.-dotmail-bottomButton {
+	cursor: default;
+	display: inline-block;
+	font: 11px Helvetica;
+	-webkit-font-smoothing: antialiased;
+	font-weight: bold;
+	color: #868686;
+	text-shadow: 0px 1px 0px rgba(255,255,255, .5);
+	border: solid 1px #fff;
+	-webkit-border-radius: 4px;
+	position: relative;
+	top: -1px;
+	vertical-align: middle;
+	height: 21px;
+}
+
+.-dotmail-bottomReplyButton {
+	display: inline-block;
+	background-image: url(replyNormal.png); background-repeat: no-repeat;
+	background-position: 8px 3px;
+	background-size: 22px 15px;
+	
+	height: 21px; padding-left: 35px; padding-right: 0px;
+}
+
+.-dotmail-bottomReplyButton:hover {
+	color: #565656;
+	background-image: url(reply.png); background-repeat: no-repeat;
+	background-size: 22px 15px;
+}
+
+.-dotmail-bottomReplyButton:active {
+	color: #0067BD;
+	background-image: url(replyActive.png); background-repeat: no-repeat;
+	background-position: 9px 3px;
+}
+
+.-dotmail-bottomReplyAllButton {
+	display: inline-block;
+	background-image: url(replyallNormal.png); background-repeat: no-repeat;
+	background-position: 8px 3px;
+	background-size: 23px 15px;
+	
+	height: 21px; padding-left: 35px; padding-right: 0px;
+}
+
+.-dotmail-bottomReplyAllButton:hover {
+	color: #565656;
+	background-image: url(replyall.png); background-repeat: no-repeat;
+}
+
+.-dotmail-bottomReplyAllButton:active {
+	color: #0067BD;
+	background-image: url(replyallActive.png); background-repeat: no-repeat;
+}
+
+.-dotmail-bottomForwardButton {
+	display: inline-block;
+	background-image: url(forwardNormal.png); background-repeat: no-repeat;
+	background-position: 8px 3px;
+	background-size: 22px 15px;
+	
+	height: 21px; padding-left: 35px; padding-right: 0px;
+}
+
+.-dotmail-bottomForwardButton:hover {
+	color: #565656;
+	background-image: url(forward.png); background-repeat: no-repeat;
+}
+
+.-dotmail-bottomForwardButton:active {
+	color: #0067BD;
+	background-image: url(forwardActive.png); background-repeat: no-repeat;
+}
+
+.conversation-subject {
+	background-color:#fff;
+	position: relative;
+	padding-left: 200px;
+}
+
+div #main-body {
+	position: absolute;
+	overflow: scroll;
+	padding: 0px;
+	background-color: #f5f5f5;
+}
+
+a {
+	color: #006AE3;
+}
+
+a:hover {
+	/*color:#005ec9;*/
+	color:#004eb9;
+}
+
+a:active {
+	color:#008AF3;
+}
+
+.-dotmail-inline-horizontal-scrollbar {
+	position: relative;
+	margin-top: -15px;
+	/*background-color: blue;*/
+	height: 15px;
+	width: 100%;
+	/*-webkit-transition: opacity ease-in-out 300ms;*/
+	border-radius: 4px;
+}
+
+.-dotmail-bottom-horizontal-scrollbar {
+	position: fixed;
+	bottom: 0px;
+	/*background-color: blue;*/
+	height: 15px;
+	width: 100%;
+	/*-webkit-transition: opacity ease-in-out 300ms;*/
+}
+
+/*
+.scrollbar-thumb {
+	background-color:red;
+	-webkit-user-select: none;
+	height:13px;
+	width:20px;
+	opacity: 0.5;
+	-webkit-transition: opacity ease-in-out 300ms;
+}
+*/
+
+.-dotmail-scrollbar-thumb-interior {
+	-webkit-user-select: none;
+	position:relative;
+	top: 6px;
+	height: 6px;
+	width: 100%;
+	background-color: #000;
+	border-radius: 4px;
+}
+
+div.-dotmail-scrollbar-thumb, div.-dotmail-scrollbar-thumb-not-animated {
+	height: 15px;
+	position: relative;
+}
+
+div.-dotmail-quickReply
+{
+	overflow: hidden;
+	height: 0px;
+	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2F4F5), color-stop(99%,#f9fafa));*/
+	background-color: #FAFAFA;
+	-webkit-transition: height ease-in-out 300ms;
+	position: relative;
+	-webkit-box-shadow: inset 0 0 3px #aedcfe;
+	border: 1px solid #d2dada;
+	opacity: 0;
+}
+
+div.-dotmail-quickReplyTextContentsContainer, div.-dotmail-quickReplyTextContentsContainerFocus {
+	outline: none;
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 21px;
+	margin-bottom: 5px;
+	padding: 5px;
+	padding-right: 25px;
+	background-color: #f8fafa;
+
+}
+
+div.-dotmail-quickReplyTextContentsContainerFocus {
+	/*-webkit-box-shadow: 0px 0px 5px #aedcfe;*/
+}
+
+div.-dotmail-quickReplyTextContents {
+	outline: none;
+	font-family: Helvetica; font-size: 13px;
+	margin: 0px;
+	min-height: 50px;
+}
+
+div.-dotmail-openComposerButton {
+	background-image: url(popout.png); background-repeat: no-repeat;
+	width: 13px;
+	height: 13px;
+	background-size: 13px 13px;
+	opacity: 1.0;
+	position: absolute;
+	right: 26px;
+	top: 5px;
+}
+
+div.-dotmail-openComposerButton:hover {
+	opacity: 0.6;
+}
+
+div.-dotmail-openComposerButton:active {
+	opacity: 1.0;
+}
+
+div.-dotmail-quickReplyProgress {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	-webkit-transition: opacity ease-in-out 300ms;
+	width: 100%;
+}
+
+div.-dotmail-quickReplySending {
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 10px;
+}
+
+div.-dotmail-quickReplySent {
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 10px;
+}
+
+div.-dotmail-quickReplyContents {
+	position: relative;
+	-webkit-transition: opacity ease-in-out 300ms;
+}
+
+div.-dotmail-quickReplyRecipient {
+	font-family: "Lucida Grande"; font-size: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+div.-dotmail-buttonSend {
+	cursor: default;
+	font: 11px "Lucida Grande";
+	font-weight: bold;
+	height: 21px;
+	min-width: 45px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align: center;
+	display: inline-block;
+}
+
+div.-dotmail-buttonSend {
+	color: #fff;
+	text-shadow: 0px 1px 1px rgba(0,0,0, .3);
+	border: solid 1px #265688;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#75B4F6), color-stop(99%,#3A7DC4));
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow:0px 1px 0px #fff,inset 0px 1px 0px rgba(255,255,255, .3);
+}
+
+div.-dotmail-buttonSend:hover {
+	-webkit-box-shadow:inset 0px 0px 0px rgba(255,255,255, .3);
+	background: #3A7DC4;
+}
+
+div.-dotmail-buttonSend:active {
+	-webkit-box-shadow:0px 0px 2px #3A7DC4;
+}
+
+div.-dotmail-buttonSend {
+	cursor: default;
+	font: 14px "HelveticaNeue";
+	font-weight: normal;
+	
+	height: 28px;
+	min-width: 106px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align: center;
+	position: relative;
+	bottom: 18px;
+}
+
+div.-dotmail-buttonSendOnlyDisabled {
+	color: white;
+	background: #e71718;
+}
+
+div.-dotmail-buttonSendOnly {
+	color: #3A3A3A;
+	text-shadow: 0px 1px 1px rgba(255,255,255, .5);
+	border: solid 1px #BABABA;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEFF1), color-stop(99%,#E0E2E4));
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 0px #fff,inset 0px 1px 0px rgba(255,255,255, 1);
+}
+
+div.-dotmail-buttonSendOnly:hover {
+	-webkit-box-shadow:inset 0px 0px 0px rgba(255,255,255, 1);
+	background: #E0E2E4;
+}
+
+div.-dotmail-buttonSendOnly:active {
+	-webkit-box-shadow:0px 0px 2px #E0E2E4;
+}
+
+div.-dotmail-buttonCancel {
+	cursor: default;
+	background-image: url(QuickReplyCancel.png); background-repeat: no-repeat;
+	background-size: 12px 12px;
+	height: 12px;
+	width: 12px;
+	position: absolute;
+	top: -80px;
+	left: 120px;
+}
+
+div.-dotmail-buttonCancel:hover {
+	cursor: pointer;
+}
+
+div.-dotmail-messageBodyTextContents {
+	padding-top: 30px;
+	padding-left: 88px;
+	padding-right: 88px;	
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+.-dotmail-quickReplyCounter {
+	font-family: LucidaGrande; font-size: 11px;
+	font-weight: bold;
+	margin-right: 5px;
+	position: relative;
+	top: 5px;
+	display: inline-block;
+}
+
+.-dotmail-quickReplyButtonsContainer {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding-left: 20px;
+	padding-right: 21px;
+	white-space: nowrap;
+}
+
+.-dotmail-nextStepImage {
+	position: relative;
+	top: 3px;
+	width: 16px;
+}
+
+.-dotmail-contentsAnimated {
+	overflow-x: hidden; 
+	overflow-y: hidden; 
+	display:none; 
+	height: 0px; 
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+	padding-left: 22px;
+	padding-right: 22px;
+	background-color: #f4f5f5;
+	-webkit-transition: height ease-in-out 300ms;
+}
+
+.-dotmail-firstContentsAnimated {
+	overflow-x: hidden; 
+	overflow-y: hidden; 
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+	padding-left: 0px;
+	padding-right: 0px;
+	background-color: #f4f5f5;
+	-webkit-transition: height ease-in-out 300ms;
+}
+
+.-dotmail-contents {
+	margin-top: 0px; margin-bottom: 0px;
+	background-color: #fff;
+}
+
+.-dotmail-horizontalScrollview {
+	overflow-x: scroll;
+}
+
+.-dotmail-contentsTopSpace {
+	height: 5px;
+}
+
+.-dotmail-messageBodyAttachments {
+	position: relative; height: auto;
+}
+
+.-dotmail-replyBarContainer {
+	-webkit-transition: opacity 300ms ease-in-out; padding-bottom: 8px; margin-left: 5px; margin-right: 5px;
+}
+
+.-dotmail-replyBarRightButtonsContainer {
+	position: absolute; right: 0px; top: 0px; padding-left: 20px; padding-right: 15px; white-space:nowrap;
+}
+
+.-dotmail-replyBarLeftButtonsContainer {
+	position: absolute; left: 0px; top: 0px; padding-left: 15px; padding-right: 20px; white-space:nowrap;
+}
+
+.-dotmail-bottomButtonReposition {
+	position: relative; top: 4px;
+}
+
+.-dotmail-quickReplyButtonInner {
+	position: relative; top: 4px;
+}
+
+.-dotmail-quickReplyBottomContainer {
+	position: relative; height: 33px;
+}
+
+.-dotmail-quickReplyRecipientContainer {
+	position: absolute; left: 20px; top: 1px;
+}
+
+.-dotmail-nextStepImageContainer {
+	width: 14px;
+	height: 23px;
+	position: relative;
+	border: 0px;  
+	top: 12px;
+	left: 20px;
+}
+
+.-dotmail-quickReplyButtonSpace {
+	display:inline-block;
+	margin-left: 5px;
+}
+

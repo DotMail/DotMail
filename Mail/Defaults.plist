@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DMUnifiedInboxEnabled</key>
+	<true/>
+	<key>DMSidebarEnabled</key>
+	<true/>
+	<key>DMMessagePreviewEnabled</key>
+	<true/>
+	<key>moveToApplicationsFolderAlertSuppress</key>
+	<false/>
+	<key>WebContinuousSpellCheckingEnabled</key>
+	<true/>
+	<key>DMAccounts</key>
+	<array/>
+	<key>DMDisplayStatusItem</key>
+	<true/>
+	<key>DMSidebarWidth</key>
+	<integer>164</integer>
+	<key>DMFullscreenSidebarWidth</key>
+	<integer>164</integer>
+	<key>DMMessageViewWidth</key>
+	<integer>286</integer>
+	<key>DMFullscreenMessageViewWidth</key>
+	<integer>286</integer>
+	<key>DMLaunchAtLoginEnabled</key>
+	<false/>
+	<key>LEPLogEnabledFilenames</key>
+	<array>
+		<string>DMDatabase.m</string>
+		<string>PSTConversation.m</string>
+		<string>LEPIMAPFetchAttachmentRequest</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'Mail' target in the 'Mail' project
+//
+
+#ifdef __OBJC__
+	#import <TwUI/TUIKit.h>
+	#import <Puissant/Puissant.h>
+	#import "DMApplication.h"
+#endif

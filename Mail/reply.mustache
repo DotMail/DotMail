@@ -1,0 +1,53 @@
+{{%AUTOESCAPE context="HTML"}}
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+		</meta>
+    </head>
+	<div id="main-body" contenteditable="true">
+		<div>
+			<div id="reply-content">
+				<br/>
+			</div>
+			<div id="{{SIGNATURE_IDNAME}}"></div>
+			
+			<p style="color: #A0A0A8;">{{REPLY_MESSAGE_LABEL}}</p>
+			<blockquote type="cite" style="border-left-style:solid;border-width:1px;margin-left:0px;padding-left:10px;">
+				<span id="message-body">
+					</span>
+			
+			{{#ATTACHMENTS_SEPARATOR}}
+			<div style="border-bottom: 1px solid #f0f0f0; height: 10px;">
+			</div>
+			<br/>
+			
+			<div style="font-weight: bold; font-size: 14px; margin-bottom: 5px;">{{REPLY_ATTACHMENTS_LABEL}}</div>
+			{{/ATTACHMENTS_SEPARATOR}}
+			
+			{{#ATTACHMENTS}}
+			
+			{{#ATTACHMENT_IMAGE}}
+			<div>
+				{{#ATTACHMENT_FILENAME}}
+				<div style="">- {{FILENAME}}</div>
+				{{/ATTACHMENT_FILENAME}}
+			</div>
+			{{/ATTACHMENT_IMAGE}}
+			
+			{{#ATTACHMENT_OTHER}}
+			<div>
+				{{#ATTACHMENT_FILENAME}}
+				<div style="">- {{FILENAME}}</div>
+				{{/ATTACHMENT_FILENAME}}
+			</div>
+			{{/ATTACHMENT_OTHER}}
+			
+			{{/ATTACHMENTS}}
+			</blockquote>
+			
+			<div>
+				<br/>
+			</div>
+		</div>
+	</div>
+</html>

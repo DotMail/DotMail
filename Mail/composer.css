@@ -1,0 +1,29 @@
+body {
+	font-family: Helvetica;
+	font-size: 13px;
+	background-color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	color: #000;
+}
+
+blockquote[type=cite] {
+	border-left-style:solid;
+	border-left-color:#002162;
+	color:#002162;
+	border-width:1px;
+	margin-left:0px;
+	padding-left:10px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+div#main-body {
+	overflow: scroll;
+	padding: 10px;
+}
+
+pre {
+	white-space: pre-wrap;
+}
