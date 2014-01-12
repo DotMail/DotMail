@@ -44,7 +44,7 @@
 	CGContextSetRGBFillColor(ctx, 1.0, 1.0, 1.0, 1);
 	CGContextFillRect(ctx, b);
 
-	CGContextSetStrokeColorWithColor(ctx, [NSColor separatorColor].tui_CGColor);
+	CGContextSetStrokeColorWithColor(ctx, [NSColor colorWithCalibratedRed:222.0f/255.0f green:230.0f/255.0f blue:235.0f/255.0f alpha:1.0f].CGColor);
 	CGContextBeginPath (ctx);
 	CGContextMoveToPoint(ctx, minx, miny);
 	CGContextAddLineToPoint(ctx, maxx, miny);

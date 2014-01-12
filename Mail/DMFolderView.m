@@ -85,9 +85,14 @@
 	[self _update];
 }
 
+- (NSString *)title {
+	return DMFolderTitleFromSelection(self.selection, self.path);
+}
+
 - (void)setLabelColor:(NSColor *)labelColor {
 	_labelColor = labelColor;
 	[self.colorWell setBackgroundColor:labelColor];
+	[self.colorWell setNeedsDisplay];
 }
 
 - (void)setLevel:(NSUInteger)level {

@@ -17,10 +17,13 @@
 
 - (void)updateCount;
 
+@property (nonatomic, copy) NSString *path;
+@property (nonatomic, copy) NSString *title;
+
+
 @property (nonatomic, assign) id<DMFolderViewActionDelegate> actionDelegate;
 @property (nonatomic, strong) TUILabel *label;
 @property (nonatomic, strong) TUILabel *counterView;
-@property (nonatomic, copy) NSString *path;
 @property (nonatomic, strong) PSTAccountController *account;
 @property (nonatomic, assign, getter = isSelected) BOOL selected;
 @property (nonatomic, assign) NSUInteger level;

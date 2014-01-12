@@ -16,12 +16,6 @@
 
 @end
 
-@interface DMPersistentStateManager (DMLabelColors)
-
-+ (NSMutableArray *)labelColorsList;
-
-@end
-
 @interface DMPersistentStateManager (DMSubscripting)
 
 - (id)objectForKeyedSubscript:(id)key;

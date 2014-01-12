@@ -50,7 +50,13 @@
 	[self.labelSeparatorView updateCount];
 	[self.foldersContainerView addSubview:self.labelSeparatorView];
 
+	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(recolor) name:PSTMailAccountLabelColorsUpdatedNotification object:nil];
+	
 	return self;
+}
+
+- (void)dealloc {
+	[NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 #pragma mark - Folder Management
@@ -84,12 +90,11 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	NSArray *labelColors = DMPersistentStateManager.labelColorsList;
 	if (self.selected) {
 		[self.accountView setFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), 30)];
 		[self _calcScrollviewHeight];
 		[self.foldersContainerView setFrame:CGRectMake(0, 30, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)-30)];
-		int index = 0;
+		NSUInteger index = 0;
 		NSUInteger height = roundtol(self.foldersContainerView.contentSize.height) - (70 - (30 * self.index));
 		NSUInteger labelsHeight = height - 80;
 		
@@ -102,17 +107,17 @@
 		[self.labelSeparatorView setFrame:CGRectMake(0, height-(index*30), CGRectGetWidth(self.frame), 25)];
 		[self.labelSeparatorView setAlpha:1.0f];
 		
-		NSUInteger labelColorIdx = 0;
-		for (DMFolderView *folderView in self.folderViews) {
+		for (NSUInteger i = 0; i < self.folderViews.count; i++) {
+			DMFolderView *folderView = self.folderViews[i];
+			if (folderView.selection != PSTFolderTypeAllMail && folderView.selection != PSTFolderTypeSpam && [self.account.visibleLabels indexOfObjectIdenticalTo:folderView.path] == NSNotFound) {
+				folderView.alpha = 0.0f;
+				continue;
+			}
 			folderView.frame = CGRectMake(0, labelsHeight-(index*20), CGRectGetWidth(self.frame), 16);
-			NSColor *colorHex = [labelColors objectAtIndex:labelColorIdx];
+			NSColor *colorHex = [self.account colorForLabel:folderView.path ?: folderView.title];
 			[folderView setLabelColor:colorHex];
 			[folderView setAlpha:1.0f];
 			index++;
-			labelColorIdx++;
-			if (labelColorIdx > labelColors.count) {
-				labelColorIdx = 0;
-			}
 		}
 	} else {
 		[self.accountView setFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), 30)];
@@ -126,19 +131,14 @@
 		[self.foldersContainerView bringSubviewToFront:self.labelSeparatorView];
 		[self.labelSeparatorView setFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 25)];
 		[self.labelSeparatorView setAlpha:0.0f];
-		
-		NSUInteger labelColorIdx = 0;
-		for (DMFolderView *folderView in self.folderViews) {
-			[folderView setFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 16)];
-			NSColor *colorHex = [labelColors objectAtIndex:labelColorIdx];
-			[folderView setLabelColor:colorHex];
-			[folderView setAlpha:0.0f];
-			index++;
-			labelColorIdx++;
-			if (labelColorIdx > labelColors.count) {
-				labelColorIdx = 0;
-			}
-		}
+		[self.folderViews makeObjectsPerformSelector:@selector(setHidden:) withObject:@YES];
+	}
+}
+
+- (void)recolor {
+	for (DMFolderView *folderView in self.folderViews) {
+		NSColor *colorHex = [self.account colorForLabel:folderView.path ?: folderView.title];
+		[folderView setLabelColor:colorHex];
 	}
 }
 
@@ -189,7 +189,7 @@
 		}
 	}
 	
-	for (NSString *label in self.account.visibleLabels) {
+	for (NSString *label in self.account.allLabels) {
 		DMFolderView *newFolder = [[DMFolderView alloc]init];
 		[newFolder setAutoresizingMask:(TUIViewAutoresizingFlexibleBottomMargin | TUIViewAutoresizingFlexibleWidth)];
 		[newFolder setAccount:self.account];

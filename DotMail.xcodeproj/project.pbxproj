@@ -195,6 +195,8 @@
 		84B42163164DE56C000908C8 /* DMSMTPAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B42162164DE56C000908C8 /* DMSMTPAssistantViewController.m */; };
 		84B42169164DE9C1000908C8 /* DMAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B42168164DE9C1000908C8 /* DMAssistantViewController.m */; };
 		84B639E017EFB83D003B5BA2 /* DMLayeredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B639DF17EFB83D003B5BA2 /* DMLayeredImageView.m */; };
+		84B71A2E1881F0070013D89E /* DMOrganizeFolderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */; };
+		84B71A3F1881F0360013D89E /* DMOrganizeAccountCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */; };
 		84B7CCDC187F7E54006DCD80 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */; };
 		84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; };
 		84B7CCFA187F8036006DCD80 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */; };
@@ -731,6 +733,10 @@
 		84B42168164DE9C1000908C8 /* DMAssistantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAssistantViewController.m; sourceTree = "<group>"; };
 		84B639DE17EFB83D003B5BA2 /* DMLayeredImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLayeredImageView.h; sourceTree = "<group>"; };
 		84B639DF17EFB83D003B5BA2 /* DMLayeredImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLayeredImageView.m; sourceTree = "<group>"; };
+		84B71A2C1881F0070013D89E /* DMOrganizeFolderCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOrganizeFolderCellView.h; sourceTree = "<group>"; };
+		84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMOrganizeFolderCellView.m; sourceTree = "<group>"; };
+		84B71A3D1881F0360013D89E /* DMOrganizeAccountCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOrganizeAccountCellView.h; sourceTree = "<group>"; };
+		84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMOrganizeAccountCellView.m; sourceTree = "<group>"; };
 		84B7CCC3187D0C5B006DCD80 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../../Library/Developer/Xcode/DerivedData/DotMail-emhwzsulutypldfbbxmbyekluwnt/Build/Products/Debug/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 		84BF393B18149AA800AEF072 /* DMAccountSetupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAccountSetupWindow.h; sourceTree = "<group>"; };
 		84BF393C18149AA800AEF072 /* DMAccountSetupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAccountSetupWindow.m; sourceTree = "<group>"; };
@@ -1366,6 +1372,10 @@
 			children = (
 				84273AB7178CAC5500C40276 /* DMOrganizePreferencesViewController.h */,
 				84273AB8178CAC5500C40276 /* DMOrganizePreferencesViewController.m */,
+				84B71A3D1881F0360013D89E /* DMOrganizeAccountCellView.h */,
+				84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */,
+				84B71A2C1881F0070013D89E /* DMOrganizeFolderCellView.h */,
+				84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */,
 			);
 			name = Organize;
 			sourceTree = "<group>";
@@ -2043,6 +2053,7 @@
 				84B238311669D060003B442A /* DMRefreshControl.m in Sources */,
 				84B238421669D328003B442A /* DMConversationViewController.m in Sources */,
 				84F1E65316867150003112A3 /* DMStatusBarManager.m in Sources */,
+				84B71A2E1881F0070013D89E /* DMOrganizeFolderCellView.m in Sources */,
 				84273ABC178CAC7600C40276 /* DMAliasesPreferencesViewController.m in Sources */,
 				84EB934E17AEE96100F18096 /* DMCloudPreferencesViewController.m in Sources */,
 				8484CD0917836B3600BADED6 /* NSAttributedString+HTMLFromRange.m in Sources */,
@@ -2058,6 +2069,7 @@
 				84E212B516F154280078FD37 /* DMAttachmentsViewController.m in Sources */,
 				840F1B65178C952300E1262C /* DMPreferencesWindowController.m in Sources */,
 				84EE48D91785043E00E5A006 /* DMApplication.m in Sources */,
+				84B71A3F1881F0360013D89E /* DMOrganizeAccountCellView.m in Sources */,
 				84CFD5C916F939C000F7B473 /* DMSocialPopoverViewController.m in Sources */,
 				846C167E17B4582800EA3725 /* DMLayeredClipView.m in Sources */,
 				84389025171A1C71004080CA /* _MTTokenCompletionTableView.m in Sources */,

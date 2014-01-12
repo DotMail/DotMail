@@ -68,16 +68,4 @@ static NSMutableArray *colors = nil;
 	[self.blockMap removeAllObjects];
 }
 
-+ (NSMutableArray *)labelColorsList {
-	if (colors == nil) {
-		NSString *labelsColorPath = [[NSBundle mainBundle] pathForResource:@"label-colors" ofType:@"plist"];
-		NSArray *hexValues = [NSArray arrayWithContentsOfFile:labelsColorPath];
-		colors = [NSMutableArray array];
-		for (NSString *hexValue in hexValues) {
-			[colors addObject:[NSColor colorFromHexadecimalValue:hexValue]];
-		}
-	}
-	return colors;
-}
-
 @end

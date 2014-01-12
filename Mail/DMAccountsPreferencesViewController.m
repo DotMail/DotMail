@@ -91,7 +91,6 @@ static CGFloat const DMAccountCellHeight = 50.f;
 	return row == PSTAccountManager.defaultManager.accounts.count;
 }
 
-
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
 	DMAccountCell *tableCellView = (DMAccountCell*)[tableView makeViewWithIdentifier:[tableColumn identifier] owner:self];
 	return tableCellView;
@@ -106,11 +105,6 @@ static CGFloat const DMAccountCellHeight = 50.f;
 	return cell;
 }
 
-
-- (CGFloat)tableView:(TUITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return DMAccountCellHeight;
-}
-
 #pragma mark -  NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -120,8 +114,6 @@ static CGFloat const DMAccountCellHeight = 50.f;
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
 	return (row == PSTAccountManager.defaultManager.accounts.count) ? @"Add" : PSTAccountManager.defaultManager.accounts[row];
 }
-
-
 
 @end
 

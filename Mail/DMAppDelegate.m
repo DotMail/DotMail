@@ -65,8 +65,11 @@
 		}
 	}];
 	
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
 	[self._dmUpdatesMenuItem setTarget:MSHUpdater.standardUpdater];
 	[self._dmUpdatesMenuItem setAction:@selector(checkForUpdates)];
+#pragma clang diagnostic pop
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {

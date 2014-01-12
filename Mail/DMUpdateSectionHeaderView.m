@@ -51,7 +51,7 @@
 	_version = newVersion;
 	TUIAttributedString *attributedVersion = [TUIAttributedString stringWithString:newVersion];
 	[attributedVersion setFont:[NSFont fontWithName:@"HelveticaNeue" size:12]];
-	[attributedVersion setColor:[NSColor bodyPreviewColor]];
+	[attributedVersion setColor:[NSColor colorWithCalibratedRed:0.552 green:0.594 blue:0.629 alpha:1.000]];
 	[self.versionRenderer setAttributedString:attributedVersion];
 }
 	
