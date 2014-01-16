@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DMUnifiedInboxEnabled</key>
+	<key>PSTUnifiedInboxEnabled</key>
 	<true/>
-	<key>DMSidebarEnabled</key>
+	<key>PSTSidebarEnabled</key>
 	<true/>
-	<key>DMMessagePreviewEnabled</key>
+	<key>PSTMessagePreviewEnabled</key>
 	<true/>
 	<key>moveToApplicationsFolderAlertSuppress</key>
 	<false/>
@@ -14,17 +14,17 @@
 	<true/>
 	<key>DMAccounts</key>
 	<array/>
-	<key>DMDisplayStatusItem</key>
+	<key>PSTDisplayStatusItem</key>
 	<true/>
-	<key>DMSidebarWidth</key>
+	<key>PSTSidebarWidth</key>
 	<integer>164</integer>
-	<key>DMFullscreenSidebarWidth</key>
+	<key>PSTFullscreenSidebarWidth</key>
 	<integer>164</integer>
-	<key>DMMessageViewWidth</key>
+	<key>PSTMessageViewWidth</key>
 	<integer>286</integer>
-	<key>DMFullscreenMessageViewWidth</key>
+	<key>PSTFullscreenMessageViewWidth</key>
 	<integer>286</integer>
-	<key>DMLaunchAtLoginEnabled</key>
+	<key>PSTLaunchAtLoginEnabled</key>
 	<false/>
 	<key>LEPLogEnabledFilenames</key>
 	<array>
