@@ -9,6 +9,7 @@
 #import "DMFlatButton.h"
 #import "DMLabel.h"
 #import "NSColor+DMUIColors.h"
+#include <objc/message.h>
 
 @interface DMFlatButton ()
 
@@ -37,19 +38,12 @@
 - (void)mouseDown:(NSEvent *)theEvent {
 	self.layer.backgroundColor = [self.backgroundColor darkerColor].CGColor;
 	[self.layer setNeedsDisplay];
-	[super mouseDown:theEvent];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent {
 	self.layer.backgroundColor = self.backgroundColor.CGColor;
 	[self.layer setNeedsDisplay];
-	[super mouseUp:theEvent];
-}
-
-- (void)mouseExited:(NSEvent *)theEvent {
-	self.layer.backgroundColor = self.backgroundColor.CGColor;
-	[self.layer setNeedsDisplay];
-	[super mouseExited:theEvent];
+	objc_msgSend(self.target, self.action);
 }
 
 - (void)setTitle:(NSString *)aString {
