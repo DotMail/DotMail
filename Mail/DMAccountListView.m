@@ -102,7 +102,7 @@
 				}
 			}
 		}
-		//'labels' really comes from the PSTMailAccount class, but the unified account forwards it to us.
+		//'labels' really comes from the DMMailAccount class, but the unified account forwards it to us.
 		[unifiedAccount addObserver:self forKeyPath:@"labels" options:0 context:(__bridge void *)([self class])];
 	}
 	_creatingAccountsView = YES;
@@ -146,6 +146,7 @@
 	[self layoutSubviews];
 	[self.actionDelegate listView:self accountSelected:self.selectedAccount selection:self.selectedAccount.selectedFolder path:self.selectedAccount.selectedLabel];
 }
+
 
 - (void)layoutSubviews {
 	NSUInteger idx = 0;

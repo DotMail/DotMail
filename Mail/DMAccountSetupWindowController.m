@@ -18,12 +18,13 @@
 @interface DMAccountSetupWindowController ()
 @property (nonatomic, strong) NSMutableOrderedSet *preferencePanes;
 @property (nonatomic) NSUInteger visiblePaneIndex;
+@property (nonatomic) BOOL isModal;
 @end
 
 @implementation DMAccountSetupWindowController
 
 + (instancetype)standardAccountSetupWindowController {
-	static DMAccountSetupWindowController *instance = nil;
+	static DMAccountSetupWindowController *instance;
 	if (instance == nil) {
 		instance = [[DMAccountSetupWindowController alloc]init];
 		[instance buildUI];
@@ -32,11 +33,13 @@
 }
 
 + (instancetype)modalAccountSetupWindowController {
-	static DMAccountSetupWindowController *instance = nil;
+	static DMAccountSetupWindowController *instance;
 	if (instance == nil) {
 		instance = [[DMAccountSetupWindowController alloc]init];
 		[instance buidlModalUI];
+		instance.isModal = YES;
 	}
+	[instance resetAllPanes];
 	return instance;
 }
 
@@ -64,11 +67,17 @@
 }
 
 - (void)buidlModalUI {
-	DMBasicAssistantViewController *basicAssistantViewController = [[DMBasicAssistantViewController alloc]init];
+	DMBasicAssistantViewController *basicAssistantViewController = [[DMBasicAssistantViewController alloc] initInModalSheet];
 	DMIMAPAssistantViewController *customIMAPAssistantViewController = [[DMIMAPAssistantViewController alloc]init];
 
 	[self insertAssistantPane:basicAssistantViewController];
 	[self insertAssistantPane:customIMAPAssistantViewController];
+}
+
+- (void)resetAllPanes {
+	for (DMAssistantViewController *viewController in self.preferencePanes) {
+		[viewController resetUI];
+	}
 }
 
 - (void)insertAssistantPane:(DMAssistantViewController *)preferencePane {
@@ -152,9 +161,13 @@
 	[super flagsChanged:theEvent];
 }
 
+#pragma mark - Modal Window
+
 - (void)beginSheetModalForWindow:(NSWindow *)window {
-	[NSApp beginSheet:self.window modalForWindow:window modalDelegate:window didEndSelector:NULL contextInfo:nil];
+	[NSApp beginSheet:self.window modalForWindow:window modalDelegate: self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:NULL];
 }
+
+- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo { }
 
 #pragma mark - DMAccountSetupDelegate
 
@@ -172,8 +185,14 @@
 	[[(NSWindowController *)[(DMAppDelegate *)[NSApp delegate] mainWindowController] window]setAnimationBehavior:NSWindowAnimationBehaviorDocumentWindow];
 	[(NSWindowController *)[(DMAppDelegate *)[NSApp delegate] mainWindowController] showWindow:NSApp];
 	[[(NSWindowController *)[(DMAppDelegate *)[NSApp delegate] mainWindowController] window]setAnimationBehavior:NSWindowAnimationBehaviorNone];
-	[NSApp endSheet:self.window];
-	[self close];
+	
+	if (self.isModal) {
+		[NSApp endSheet:self.window returnCode:NSCancelButton];
+		[self.window orderOut:nil];
+	} else {
+		[NSApp endSheet:self.window];
+		[self close];
+	}
 }
 
 - (void)_createPOPAccountWithInfo:(NSDictionary *)info {

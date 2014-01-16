@@ -69,5 +69,6 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 500 };
 	[self.passwordField setText:[info objectForKey:@"imapPassword"]];
 }
 
+- (void)resetUI {}
 
 @end

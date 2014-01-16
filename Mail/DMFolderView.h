@@ -20,7 +20,6 @@
 @property (nonatomic, copy) NSString *path;
 @property (nonatomic, copy) NSString *title;
 
-
 @property (nonatomic, assign) id<DMFolderViewActionDelegate> actionDelegate;
 @property (nonatomic, strong) TUILabel *label;
 @property (nonatomic, strong) TUILabel *counterView;
@@ -41,6 +40,5 @@
 @end
 
 @interface DMLabelSeparatorView : DMFolderView
-
 
 @end

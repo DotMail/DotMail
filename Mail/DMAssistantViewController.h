@@ -15,6 +15,7 @@
 
 - (CGSize)contentSize;
 - (NSString *)title;
+- (void)resetUI;
 
 @property (nonatomic, strong) NSMutableDictionary *info;
 - (void)setInfoValue:(id)value forKey:(id)key;

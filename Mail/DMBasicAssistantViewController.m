@@ -16,6 +16,7 @@
 #import <MailCore/mailcore.h>
 
 static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
+static CGSize const DMModalWelcomeViewControllerSize = (CGSize){ 320, 440 };
 
 @interface DMBasicAssistantViewController () <TUITextFieldDelegate>
 
@@ -43,17 +44,19 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	return self;
 }
 
-- (void) loadView {
-	DMColoredView *view = [[DMColoredView alloc]initWithFrame:(NSRect){ {0, 0}, { 320, 400 } }];
+- (void)loadView {
+	CGFloat delta = isModal ? 40 : 0;
+	
+	DMColoredView *view = [[DMColoredView alloc]initWithFrame:(NSRect){ {0, 0}, self.contentSize }];
 	view.backgroundColor = NSColor.whiteColor;
 
-	DMLayeredImageView *iconImageView = [[DMLayeredImageView alloc]initWithFrame:(NSRect){ { 110, 280 } , { 100, 100 } }];
+	DMLayeredImageView *iconImageView = [[DMLayeredImageView alloc]initWithFrame:(NSRect){ { 110, 280 + delta } , { 100, 100 } }];
 	iconImageView.imageAlignment = NSImageAlignCenter;
 	iconImageView.image = [NSImage imageNamed:NSImageNameUserAccounts];
 	iconImageView.imageScaling = NSImageScaleProportionallyUpOrDown;
 	[view addSubview:iconImageView];
 	
-	DMLabel *titleLabel = [[DMLabel alloc]initWithFrame:(NSRect){ { 20, 240 }, { 280, 36 } }];
+	DMLabel *titleLabel = [[DMLabel alloc]initWithFrame:(NSRect){ { 20, 240 + delta }, { 280, 36 } }];
 	titleLabel.text = @"Login";
 	titleLabel.textAlignment = NSCenterTextAlignment;
 	titleLabel.font = [NSFont fontWithName:@"Helvetica-Bold" size:26];
@@ -61,12 +64,12 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	[view addSubview:titleLabel];
 	
 	CALayer *backgroundNameLayer = CALayer.layer;
-	backgroundNameLayer.frame = (CGRect){ { 20, 178 }, .size.width = 280, .size.height = 40 };
+	backgroundNameLayer.frame = (CGRect){ { 20, 178 + delta }, .size.width = 280, .size.height = 40 };
 	backgroundNameLayer.backgroundColor = [NSColor colorWithCalibratedRed:0.908 green:0.936 blue:0.946 alpha:1.000].CGColor;
 	backgroundNameLayer.cornerRadius = 4.0f;
 	[view.layer addSublayer:backgroundNameLayer];
 
-	self.nameTextField = [[NSTextField alloc] initWithFrame:(CGRect){ { 24, 176 }, .size.width = 276, .size.height = 32 } ];
+	self.nameTextField = [[NSTextField alloc] initWithFrame:(CGRect){ { 24, 176 + delta }, .size.width = 276, .size.height = 32 } ];
 	//	[nameTextField setDelegate:self];
 	[self.nameTextField.cell setUsesSingleLineMode:YES];
 	self.nameTextField.focusRingType = NSFocusRingTypeNone;
@@ -76,12 +79,12 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	[view addSubview:self.nameTextField];
 	
 	CALayer *backgroundEmailLayer = CALayer.layer;
-	backgroundEmailLayer.frame = (CGRect){ { 20, 128 }, .size.width = 280, .size.height = 40 };
+	backgroundEmailLayer.frame = (CGRect){ { 20, 128 + delta }, .size.width = 280, .size.height = 40 };
 	backgroundEmailLayer.backgroundColor = [NSColor colorWithCalibratedRed:0.908 green:0.936 blue:0.946 alpha:1.000].CGColor;
 	backgroundEmailLayer.cornerRadius = 4.0f;
 	[view.layer addSublayer:backgroundEmailLayer];
 	
-	self.emailTextField = [[NSTextField alloc] initWithFrame:(CGRect){ { 24, 126 }, .size.width = 276, .size.height = 32 } ];
+	self.emailTextField = [[NSTextField alloc] initWithFrame:(CGRect){ { 24, 126 + delta }, .size.width = 276, .size.height = 32 } ];
 //	[emailTextField setDelegate:self];
 	[self.emailTextField.cell setUsesSingleLineMode:YES];
 	self.emailTextField.focusRingType = NSFocusRingTypeNone;
@@ -91,12 +94,12 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	[view addSubview:self.emailTextField];
 
 	CALayer *backgroundPasswordLayer = CALayer.layer;
-	backgroundPasswordLayer.frame = (CGRect){ { 20, 80 }, .size.width = 280, .size.height = 40 };
+	backgroundPasswordLayer.frame = (CGRect){ { 20, 80 + delta }, .size.width = 280, .size.height = 40 };
 	backgroundPasswordLayer.backgroundColor = [NSColor colorWithCalibratedRed:0.908 green:0.936 blue:0.946 alpha:1.000].CGColor;
 	backgroundPasswordLayer.cornerRadius = 4.0f;
 	[view.layer addSublayer:backgroundPasswordLayer];
 	
-	self.passwordTextField = [[NSSecureTextField alloc] initWithFrame:(CGRect){ { 24, 78 }, .size.width = 276, .size.height = 32 } ];
+	self.passwordTextField = [[NSSecureTextField alloc] initWithFrame:(CGRect){ { 24, 78 + delta }, .size.width = 276, .size.height = 32 } ];
 	//	[passwordTextField setDelegate:self];
 	[self.passwordTextField.cell setUsesSingleLineMode:YES];
 	self.passwordTextField.focusRingType = NSFocusRingTypeNone;
@@ -115,20 +118,20 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 //	[rootView addSubview:self.warningLabel];
 //	
 	self.emailWarning = CALayer.layer;
-	self.emailWarning.frame = (CGRect) {.origin.x = CGRectGetMaxX(self.emailTextField.frame) - 24, .origin.y = NSMinY(self.emailTextField.frame) + 14, .size.width = 20, .size.height = 20 };
+	self.emailWarning.frame = (CGRect) {.origin.x = CGRectGetMaxX(self.emailTextField.frame) - 24, .origin.y = NSMinY(self.emailTextField.frame) + 14  + delta, .size.width = 20, .size.height = 20 };
 	[self.emailWarning setOpacity:0.0f];
 	[self.emailWarning setAutoresizingMask:(TUIViewAutoresizingFlexibleRightMargin | TUIViewAutoresizingFlexibleLeftMargin)];
 	[self.emailWarning setContents:[NSImage imageNamed:NSImageNameInvalidDataFreestandingTemplate]];
 	[view.layer addSublayer:self.emailWarning];
 	
 	self.passwordWarning = CALayer.layer;
-	self.passwordWarning.frame = (CGRect) {.origin.x = CGRectGetMaxX(self.passwordTextField.frame) - 24, .origin.y = NSMinY(self.passwordTextField.frame) + 14, .size.width = 20, .size.height = 20 };
+	self.passwordWarning.frame = (CGRect) {.origin.x = CGRectGetMaxX(self.passwordTextField.frame) - 24, .origin.y = NSMinY(self.passwordTextField.frame) + 14  + delta, .size.width = 20, .size.height = 20 };
 	[self.passwordWarning setOpacity:0.0f];
 	[self.passwordWarning setAutoresizingMask:(TUIViewAutoresizingFlexibleRightMargin | TUIViewAutoresizingFlexibleLeftMargin)];
 	[self.passwordWarning setContents:[NSImage imageNamed:NSImageNameInvalidDataFreestandingTemplate]];
 	[view.layer addSublayer:self.passwordWarning];
 
-	self.createAccountButton = [[DMFlatButton alloc]initWithFrame:(NSRect){ { 20, 28 }, { 280, 40 } }];
+	self.createAccountButton = [[DMFlatButton alloc]initWithFrame:(NSRect){ { 20, 28 + delta }, { 280, 40 } }];
 	self.createAccountButton.keyEquivalent = @"\r";
 	self.createAccountButton.buttonType = NSMomentaryPushInButton;
 	self.createAccountButton.bordered = NO;
@@ -141,25 +144,22 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	self.createAccountButton.backgroundColor = [NSColor colorWithCalibratedRed:0.105 green:0.562 blue:0.517 alpha:1.000];
 	[view addSubview:self.createAccountButton];
 	
-//	self.cancelAccountButton = [[TUIButton alloc] initWithFrame:(CGRect) { .origin.x = CGRectGetMidX(view.bounds) - 135, .origin.y = isModal ? 20 : 140, .size.width = isModal ? 120 : 170, .size.height = 40 }];
-//	[self.cancelAccountButton setAutoresizingMask:(TUIViewAutoresizingFlexibleRightMargin | TUIViewAutoresizingFlexibleLeftMargin)];
-//	[self.cancelAccountButton setTitle:@"Cancel" forState:TUIControlStateNormal];
-//	[self.cancelAccountButton.titleLabel setFont:[NSFont fontWithName:@"HelveticaNeue-Bold" size:13]];
-//	[self.cancelAccountButton.titleLabel setAlignment:TUITextAlignmentCenter];
-//	[self.cancelAccountButton.titleLabel setTextColor:[NSColor whiteColor]];
-//	[self.cancelAccountButton setTitleColor:[NSColor whiteColor] forState:TUIControlStateNormal];
-//	self.cancelAccountButton.drawRect = ^(TUIView *button, CGRect rect) {
-//		if ([(TUIButton *) button state] == TUIControlStateHighlighted) {
-//			[button setBackgroundColor:[NSColor colorWithCalibratedWhite:0.217 alpha:1.000]];
-//		}
-//		else {
-//			[button setBackgroundColor:[NSColor colorWithCalibratedWhite:0.400 alpha:1.000]];
-//		}
-//		[button drawRect:rect];
-//	};
-//	[self.cancelAccountButton addTarget:self action:@selector(cancel) forControlEvents:TUIControlEventMouseUpInside];
-//	[rootView addSubview:self.cancelAccountButton];
-//
+	if (isModal) {
+		self.cancelAccountButton = [[DMFlatButton alloc]initWithFrame:(NSRect){ { 20, 20 }, { 280, 40 } }];
+		self.cancelAccountButton.keyEquivalent = @"\r";
+		self.cancelAccountButton.buttonType = NSMomentaryPushInButton;
+		self.cancelAccountButton.bordered = NO;
+		self.cancelAccountButton.tag = 0;
+		self.cancelAccountButton.target = self;
+		self.cancelAccountButton.action = @selector(cancel);
+		self.cancelAccountButton.verticalPadding = 6;
+		self.cancelAccountButton.title = @"Cancel";
+		self.cancelAccountButton.font = [NSFont fontWithName:@"HelveticaNeue-Bold" size:20];
+		self.cancelAccountButton.backgroundColor = [NSColor colorWithCalibratedRed:0.857 green:0.048 blue:0.110 alpha:1.000];
+		[view addSubview:self.cancelAccountButton];
+	}
+
+
 //	if (isModal) {
 //		self.cancelAccountButton = [[TUIButton alloc] initWithFrame:(CGRect) { .origin.x = CGRectGetMidX(view.bounds) - 135, .origin.y = isModal ? 20 : 140, .size.width = isModal ? 120 : 170, .size.height = 40 }];
 //		[self.cancelAccountButton setAutoresizingMask:(TUIViewAutoresizingFlexibleRightMargin | TUIViewAutoresizingFlexibleLeftMargin)];
@@ -241,6 +241,13 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	self.view = view;
 }
 
+- (void)resetUI {
+	if (!CGSizeEqualToSize(self.contentSize, self.view.window.frame.size)) {
+		[self.view.window setFrame:(NSRect){ self.view.window.frame.origin, self.contentSize } display:NO animate:NO];
+	}
+	[self reset];
+}
+
 - (void)flagsChanged:(NSEvent *)theEvent {
 	if (theEvent.modifierFlags & NSAlternateKeyMask) {
 		self.createAccountButton.backgroundColor = [NSColor colorWithCalibratedRed:0.492 green:0.651 blue:0.849 alpha:1.000];
@@ -252,7 +259,7 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 }
 
 - (CGSize)contentSize {
-	return DMWelcomeViewControllerSize;
+	return isModal ? DMModalWelcomeViewControllerSize : DMWelcomeViewControllerSize;
 }
 
 - (void)reset {
@@ -317,7 +324,8 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 
 - (void)cancel {
 	self.info = nil;
-//	[self.delegate assistantViewController:self advanceToStep:DMAssistantStepDone];
+	[NSApp endSheet:self.view.window returnCode:NSCancelButton];
+	[self.view.window orderOut:nil];
 }
 
 - (void) _customConfigPrefillProvider:(MCOMailProvider *)provider {
@@ -361,7 +369,7 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	}];
 }
 
-- (BOOL) _validate {
+- (BOOL)_validate {
 	NSMutableString *warningString = [NSMutableString string];
 	float emailWarningAlpha, passwordWarningAlpha;
 	NSInteger errorFrameEnum = 0;
@@ -478,7 +486,11 @@ static CGSize const DMWelcomeViewControllerSize = (CGSize){ 320, 400 };
 	if ([provider.popServices count] != 0) {
 		[self setInfoValue:[[provider.popServices objectAtIndex:0] info] forKey:@"PSTPOPService"];
 	}
-	[[DMAccountSetupWindowController standardAccountSetupWindowController] finishCreatingAccount:self];
+	if (isModal) {
+		[DMAccountSetupWindowController.modalAccountSetupWindowController finishCreatingAccount:self];
+	} else {
+		[DMAccountSetupWindowController.standardAccountSetupWindowController finishCreatingAccount:self];
+	}
 }
 
 static NSString *errorTextForLEPErrorCode(NSUInteger err) {
@@ -493,18 +505,5 @@ static NSString *errorTextForLEPErrorCode(NSUInteger err) {
 	}
 	return @"";
 }
-
-#pragma mark - TUITextFieldDelegate
-
-//- (BOOL) textFieldShouldReturn:(TUITextField *)textField {
-//	[self.createAccountButton setHighlighted:YES];
-//	[self.createAccountButton sendActionsForControlEvents:TUIControlEventMouseUpInside];
-//	[self performSelector:@selector(_deHighlight) withObject:nil afterDelay:0.1];
-//	return YES;
-//}
-//
-//- (void) _deHighlight {
-//	[self.createAccountButton setHighlighted:NO];
-//}
 
 @end

@@ -71,7 +71,7 @@ static CGSize const kPreferencePaneContentSize = (CGSize){ 500, 300 };
 	NSButton *startupItemToggle = [[NSButton alloc]initWithFrame:(NSRect){ .origin.x = 120, .origin.y = kPreferencePaneContentSize.height - 180, .size = { 300, 18 } }];
 	[startupItemToggle setTarget:self];
 	[startupItemToggle setAction:@selector(toggleStartupItem:)];
-	startupItemToggle.state = [NSUserDefaults.standardUserDefaults boolForKey:@"DMLaunchAtLoginEnabled"];
+	startupItemToggle.state = [NSUserDefaults.standardUserDefaults boolForKey:@"PSTLaunchAtLoginEnabled"];
 	startupItemToggle.buttonType = NSSwitchButton;
 	startupItemToggle.bezelStyle = NSRegularSquareBezelStyle;
 	startupItemToggle.title = @"Start DotMail at Login";
@@ -83,7 +83,7 @@ static CGSize const kPreferencePaneContentSize = (CGSize){ 500, 300 };
 	self.view = view;
 	CFRelease(font);
 	
-	[[NSUserDefaults.standardUserDefaults rac_valuesForKeyPath:@"DMLaunchAtLoginEnabled" observer:self]subscribeNext:^(NSNumber *launchAtLogin) {
+	[[NSUserDefaults.standardUserDefaults rac_valuesForKeyPath:@"PSTLaunchAtLoginEnabled" observer:self]subscribeNext:^(NSNumber *launchAtLogin) {
 		if (launchAtLogin.boolValue) {
 			[PSTLaunchServicesManager.defaultManager insertCurrentApplicationInStartupItems:NO];
 		} else {
@@ -93,7 +93,7 @@ static CGSize const kPreferencePaneContentSize = (CGSize){ 500, 300 };
 }
 
 - (void)toggleStartupItem:(NSButton *)sender {
-	[NSUserDefaults.standardUserDefaults setBool:(BOOL)sender.state forKey:@"DMLaunchAtLoginEnabled"];
+	[NSUserDefaults.standardUserDefaults setBool:(BOOL)sender.state forKey:@"PSTLaunchAtLoginEnabled"];
 }
 
 - (void)toggleDefaultMailReader:(NSButton *)sender {

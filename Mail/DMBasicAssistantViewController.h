@@ -26,7 +26,7 @@
 @property (nonatomic, strong) NSSecureTextField *passwordTextField;
 @property (nonatomic, strong) TUILabel *warningLabel;
 @property (nonatomic, strong) DMFlatButton *createAccountButton;
-@property (nonatomic, strong) TUIButton *cancelAccountButton;
+@property (nonatomic, strong) DMFlatButton *cancelAccountButton;
 @property (nonatomic, strong) TUIButton *customAccountButton;
 @property (nonatomic, strong) TUIActivityIndicatorView *progressIndicator;
 @property (nonatomic, strong) CALayer *emailWarning;

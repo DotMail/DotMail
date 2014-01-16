@@ -9,14 +9,11 @@
 #import "DMAccountsPreferencesViewController.h"
 #import "DMColoredView.h"
 #import "DMAccountCell.h"
+#import "DMFlatButton.h"
 #import "DMAccountSetupWindowController.h"
 
 static CGSize const kPreferencePaneContentSize = (CGSize){ 500, 450 };
 static CGFloat const DMAccountCellHeight = 50.f;
-
-@interface DMAccountsPreferencesViewController ()
-@property (nonatomic, strong) DMAccountSetupWindowController *modalAssistant;
-@end
 
 @interface DMAccountsPreferencesViewController ()
 @property (nonatomic) NSUInteger selectedRow;
@@ -52,22 +49,32 @@ static CGFloat const DMAccountCellHeight = 50.f;
 		PSTMailAccount *accountToRemove = note.userInfo[@"Account"];
 		static NSString *const messageText = @"Confirm account deletion";
 		NSAlert *alert = [NSAlert alertWithMessageText:messageText defaultButton:@"Delete" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"This will permanently remove the account and settings for %@", accountToRemove.email];
-		[alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(confirmAccountDeletion:returnCode:contextInfo:) contextInfo:NULL];
+		[alert beginSheetModalForWindow:self.view.window modalDelegate:self didEndSelector:@selector(confirmAccountDeletion:returnCode:contextInfo:) contextInfo:(__bridge void *)(note.userInfo[@"Account"])];
 	}];
 	
-	self.modalAssistant = [DMAccountSetupWindowController modalAccountSetupWindowController];
-
+	DMFlatButton *createAccountButton = [[DMFlatButton alloc]initWithFrame:(NSRect){ { 0, -4 }, { NSWidth(view.bounds), 30 } }];
+	createAccountButton.keyEquivalent = @"\r";
+	createAccountButton.buttonType = NSMomentaryPushInButton;
+	createAccountButton.bordered = NO;
+	createAccountButton.target = self;
+	createAccountButton.action = @selector(addAccount:);
+	createAccountButton.verticalPadding = 6;
+	createAccountButton.title = @"+ Add Account";
+	createAccountButton.font = [NSFont fontWithName:@"HelveticaNeue-Bold" size:13];
+	createAccountButton.backgroundColor = [NSColor colorWithCalibratedRed:0.296 green:0.303 blue:0.315 alpha:1.000];
+	[view addSubview:createAccountButton];
+	
 	self.view = view;
 }
 
 - (void)addAccount:(id)sender {
-	[self.modalAssistant beginSheetModalForWindow:self.view.window];
+	[DMAccountSetupWindowController.modalAccountSetupWindowController beginSheetModalForWindow:self.view.window];
 }
 
 - (void)confirmAccountDeletion:(NSAlert *)alert returnCode:(NSUInteger)code contextInfo:(void *)context {
+	id account = (__bridge id)(context);
 	if (code == NSAlertDefaultReturn) {
-		PSTMailAccount *accountToRemove = PSTAccountManager.defaultManager.accounts[_selectedRow];
-		[PSTAccountManager.defaultManager removeAccount:accountToRemove];
+		[PSTAccountManager.defaultManager removeAccount:account];
 		_selectedRow = NSNotFound;
 		if (PSTAccountManager.defaultManager.accounts.count == 0) {
 			[self.view.window close];
