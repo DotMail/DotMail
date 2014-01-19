@@ -308,7 +308,20 @@ goog.scope = function (a) {
 /*************************************************************************************************/
 
 
-
 function loadConversationView() {
+	document.body.style.overflow = "auto"
+	//window.addEventListener("scroll", function () {
+	//	windowWasScrolled()
+	//}, false)
+	//window.addEventListener("resize", function () {
+	//	windowWasResized()
+	//}, false)
+}
 
+function showTopOptionsMenu(event) {
+	
+}
+
+function mouseDownOnMessageWithID(messageID) {
+	
 }

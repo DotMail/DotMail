@@ -44,9 +44,9 @@
 		</div>
 	</div>
 	{{#IS_FIRST_MESSAGE}}
-	<div id="Message:{{MESSAGE_ID}}" class="-dotmail-message" onmousedown="clickedOnMessage('{{MESSAGE_ID}}')">
+	<div id="Message:{{MESSAGE_ID}}" class="-dotmail-message" onmousedown="mouseDownOnMessageWithID('{{MESSAGE_ID}}')">
 	{{^IS_FIRST_MESSAGE}}
-	<div id="Message:{{MESSAGE_ID}}" class="-dotmail-message" onmouseover="setReplyBarVisible('{{MESSAGE_ID}}', true)" onmouseout="setReplyBarVisible('{{MESSAGE_ID}}', false)" onmousedown="clickedOnMessage('{{MESSAGE_ID}}')">
+	<div id="Message:{{MESSAGE_ID}}" class="-dotmail-message" onmouseover="setReplyBarVisible('{{MESSAGE_ID}}', true)" onmouseout="setReplyBarVisible('{{MESSAGE_ID}}', false)" onmousedown="mouseDownOnMessageWithID('{{MESSAGE_ID}}')">
 		<div id="Message:{{MESSAGE_ID}}-header-background" class="-dotmail-messageHeaderBackground">
 		</div>
 		{{#IS_FIRST_MESSAGE}}
@@ -89,9 +89,9 @@
 				<div class="-dotmail-horizontalScrollview" id="Message:{{MESSAGE_ID}}-horizontal-scrollview">
 					<div class="-dotmail-contentsTopSpace"></div>
 					{{#IS_FIRST_MESSAGE}}
-					<div id="Message:{{MESSAGE_ID}}-body-container" class="-dotmail-firstMessageBody" onmousedown="deselectAllAttachment()">
+					<div id="Message:{{MESSAGE_ID}}-body-container" class="-dotmail-firstMessageBody">
 					{{^IS_FIRST_MESSAGE}}
-					<div id="Message:{{MESSAGE_ID}}-body-container" class="-dotmail-messageBody" onmousedown="deselectAllAttachment()">
+					<div id="Message:{{MESSAGE_ID}}-body-container" class="-dotmail-messageBody">
 					{{/IS_FIRST_MESSAGE}}
 
 						<div id="Message:{{MESSAGE_ID}}-body" class="-dotmail-messageBodyTextContents">

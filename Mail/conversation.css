@@ -418,7 +418,6 @@ div#TopMailContents {
 
 .-dotmail-bottomReplyButton {
 	display: inline-block;
-	background-image: url(replyNormal.png); background-repeat: no-repeat;
 	background-position: 8px 3px;
 	background-size: 22px 15px;
 	
@@ -427,19 +426,16 @@ div#TopMailContents {
 
 .-dotmail-bottomReplyButton:hover {
 	color: #565656;
-	background-image: url(reply.png); background-repeat: no-repeat;
 	background-size: 22px 15px;
 }
 
 .-dotmail-bottomReplyButton:active {
 	color: #0067BD;
-	background-image: url(replyActive.png); background-repeat: no-repeat;
 	background-position: 9px 3px;
 }
 
 .-dotmail-bottomReplyAllButton {
 	display: inline-block;
-	background-image: url(replyallNormal.png); background-repeat: no-repeat;
 	background-position: 8px 3px;
 	background-size: 23px 15px;
 	
@@ -448,7 +444,6 @@ div#TopMailContents {
 
 .-dotmail-bottomReplyAllButton:hover {
 	color: #565656;
-	background-image: url(replyall.png); background-repeat: no-repeat;
 }
 
 .-dotmail-bottomReplyAllButton:active {
@@ -458,7 +453,6 @@ div#TopMailContents {
 
 .-dotmail-bottomForwardButton {
 	display: inline-block;
-	background-image: url(forwardNormal.png); background-repeat: no-repeat;
 	background-position: 8px 3px;
 	background-size: 22px 15px;
 	
@@ -501,36 +495,6 @@ a:active {
 	color:#008AF3;
 }
 
-.-dotmail-inline-horizontal-scrollbar {
-	position: relative;
-	margin-top: -15px;
-	/*background-color: blue;*/
-	height: 15px;
-	width: 100%;
-	/*-webkit-transition: opacity ease-in-out 300ms;*/
-	border-radius: 4px;
-}
-
-.-dotmail-bottom-horizontal-scrollbar {
-	position: fixed;
-	bottom: 0px;
-	/*background-color: blue;*/
-	height: 15px;
-	width: 100%;
-	/*-webkit-transition: opacity ease-in-out 300ms;*/
-}
-
-/*
-.scrollbar-thumb {
-	background-color:red;
-	-webkit-user-select: none;
-	height:13px;
-	width:20px;
-	opacity: 0.5;
-	-webkit-transition: opacity ease-in-out 300ms;
-}
-*/
-
 .-dotmail-scrollbar-thumb-interior {
 	-webkit-user-select: none;
 	position:relative;
@@ -541,13 +505,12 @@ a:active {
 	border-radius: 4px;
 }
 
-div.-dotmail-scrollbar-thumb, div.-dotmail-scrollbar-thumb-not-animated {
+div.-dotmail-scrollbar-thumb {
 	height: 15px;
 	position: relative;
 }
 
-div.-dotmail-quickReply
-{
+div.-dotmail-quickReply {
 	overflow: hidden;
 	height: 0px;
 	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2F4F5), color-stop(99%,#f9fafa));*/
@@ -571,26 +534,11 @@ div.-dotmail-quickReplyTextContentsContainer, div.-dotmail-quickReplyTextContent
 
 }
 
-div.-dotmail-quickReplyTextContentsContainerFocus {
-	/*-webkit-box-shadow: 0px 0px 5px #aedcfe;*/
-}
-
 div.-dotmail-quickReplyTextContents {
 	outline: none;
 	font-family: Helvetica; font-size: 13px;
 	margin: 0px;
 	min-height: 50px;
-}
-
-div.-dotmail-openComposerButton {
-	background-image: url(popout.png); background-repeat: no-repeat;
-	width: 13px;
-	height: 13px;
-	background-size: 13px 13px;
-	opacity: 1.0;
-	position: absolute;
-	right: 26px;
-	top: 5px;
 }
 
 div.-dotmail-openComposerButton:hover {

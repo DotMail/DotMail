@@ -202,7 +202,7 @@
 }
 
 - (void)_conversationLoaded {
-//	[self.webView.windowScriptObject callWebScriptMethod:@"loadConversationView" withArguments:nil];
+	[self.webView.windowScriptObject callWebScriptMethod:@"loadConversationView" withArguments:nil];
 }
 
 - (void)print:(id)sender {
