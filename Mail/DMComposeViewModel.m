@@ -155,11 +155,21 @@ static NSString *DMParseMessagePart(MCOAbstractPart *part) {
 }
 
 - (RACSignal *)sendMessage {
-	return [[self currentAccount]sendMessage:[self _renderMessageForSending:YES]];
+	return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+		[self.currentAccount sendMessage:[self _renderMessageForSending:YES] completion:^{
+			[subscriber sendCompleted];
+		}];
+		return nil;
+	}];
 }
 
 - (RACSignal *)saveMessage {
-	return [[self currentAccount]saveMessage:[self _renderMessageForSending:NO]];
+	return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+		[self.currentAccount saveMessage:[self _renderMessageForSending:NO] completion:^{
+			[subscriber sendCompleted];
+		}];
+		return nil;
+	}];
 }
 
 - (NSData *)emlDataForCurrentMessage {

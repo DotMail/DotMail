@@ -95,7 +95,7 @@ static CGFloat const DMAccountCellHeight = 50.f;
 }
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
-	return row == PSTAccountManager.defaultManager.accounts.count;
+	return row == (NSInteger)PSTAccountManager.defaultManager.accounts.count;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -119,7 +119,7 @@ static CGFloat const DMAccountCellHeight = 50.f;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-	return (row == PSTAccountManager.defaultManager.accounts.count) ? @"Add" : PSTAccountManager.defaultManager.accounts[row];
+	return (row == (NSInteger)PSTAccountManager.defaultManager.accounts.count) ? @"Add" : PSTAccountManager.defaultManager.accounts[row];
 }
 
 @end

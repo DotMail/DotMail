@@ -2247,7 +2247,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/External/**",
-					"\"$(SRCROOT)/Puissant/Puissant/leveldb/1.9.0/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2295,7 +2294,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/External/**",
-					"\"$(SRCROOT)/Puissant/Puissant/leveldb/1.9.0/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2365,7 +2363,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/External/**",
-					"\"$(SRCROOT)/Puissant/Puissant/leveldb/1.9.0/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2442,7 +2439,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/External/**",
-					"\"$(SRCROOT)/Puissant/Puissant/leveldb/1.9.0/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;

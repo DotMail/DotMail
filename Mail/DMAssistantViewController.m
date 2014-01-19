@@ -21,6 +21,8 @@
 	return @"";
 }
 
+- (void)resetUI {}
+
 - (void)setInfoValue:(id)value forKey:(id)key {
 	if (value == nil) {
 		[self removeInfoValueForKey:key];

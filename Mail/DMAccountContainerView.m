@@ -240,20 +240,30 @@
 
 #pragma mark - Private
 
-PUISSANT_TODO(Why the heck did I write this with gotos?)
-
 - (BOOL)_checkFolderSelected:(DMFolderView*)folderView {
 	BOOL result = NO;
 	if (self.selection == PSTFolderTypeLabel) {
 		if (self.path != nil) {
-			goto checkSpam;
+			if ([self.path isEqualToString:@"SPAM"]) {
+				if (self.selection == PSTFolderTypeSpam) {
+					[folderView setSelected:YES];
+					result = YES;
+					return result;
+				}
+			}
 		}
 		if (folderView.selection != PSTFolderTypeDrafts) {
-			goto checkSelection;
+			if (folderView.selection == PSTFolderTypeLabel) {
+				if ([self.path isEqualToString:@"SPAM"]) {
+					if (self.selection == PSTFolderTypeSpam) {
+						[folderView setSelected:YES];
+						result = YES;
+						return result;
+					}
+				}
+			}
 		}
-	checkSelection:
 		if (folderView.selection == PSTFolderTypeLabel) {
-		checkSpam:
 			if ([self.path isEqualToString:@"SPAM"]) {
 				if (self.selection == PSTFolderTypeSpam) {
 					[folderView setSelected:YES];
