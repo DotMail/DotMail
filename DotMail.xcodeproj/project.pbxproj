@@ -955,6 +955,7 @@
 		8436E5A815CF890000BFB33D /* Attachments Grid View */ = {
 			isa = PBXGroup;
 			children = (
+				84CF22311631FA000076F804 /* Preferences */,
 				8436E5A915CF892800BFB33D /* DMAttachmentCell.h */,
 				8436E5AA15CF892800BFB33D /* DMAttachmentCell.m */,
 				84E212B316F154280078FD37 /* DMAttachmentsViewController.h */,
@@ -1037,7 +1038,6 @@
 				8403CAC0163B50A700387092 /* Setup Assistants */,
 				84EFB7FD15FBEC360076C143 /* Main Window */,
 				84374A5615AF507900157F9C /* Compose Window */,
-				84CF22311631FA000076F804 /* Preferences */,
 				84DF624D1787DCB900460B0F /* Search */,
 				84804207179B77E900550D07 /* About Window */,
 				847FC5CC162F6E96004B9422 /* DMUI */,
@@ -1412,8 +1412,6 @@
 		84CF22311631FA000076F804 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				847D698A17527DEE004E09C2 /* DMPersistentStateManager.h */,
-				847D698B17527DEE004E09C2 /* DMPersistentStateManager.m */,
 				840F1B63178C952300E1262C /* DMPreferencesWindowController.h */,
 				840F1B64178C952300E1262C /* DMPreferencesWindowController.m */,
 				840F1B66178C954100E1262C /* DMPreferencesWindow.h */,
@@ -1628,6 +1626,8 @@
 				8457F125177E38690029A261 /* DMMainViewModel.m */,
 				847D69B11752B05D004E09C2 /* DMWindowErrorBanner.h */,
 				847D69B21752B05D004E09C2 /* DMWindowErrorBanner.m */,
+				847D698A17527DEE004E09C2 /* DMPersistentStateManager.h */,
+				847D698B17527DEE004E09C2 /* DMPersistentStateManager.m */,
 			);
 			name = "Main Window";
 			sourceTree = "<group>";
