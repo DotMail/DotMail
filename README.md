@@ -1,6 +1,6 @@
 ##.Mail
 
-.Mail is an open source project designed to make email beautiful and functional again.  It is a front-end GUI over top of many powerful 3rd party libraries like MailCore2, ReactiveCocoa and our own Puissant.  .Mail implement all the major email protocols: POP, IMAP and SMTP and hides the implementation details, and quite a bit of error handling, behind a smart backend to make using the application as painless and smooth as possible.
+.Mail is an open source project designed to make email beautiful and functional again.  It is a front-end GUI over top of many powerful 3rd party libraries like MailCore2, ReactiveCocoa and our own Puissant.  .Mail implements all the major email protocols: POP, IMAP and SMTP and hides implementation details, and quite a bit of error handling, behind a smart backend to make using the application as painless and smooth as possible.
 
 ##Installation
 (If necessary, remove the build folder from any previous iterations of DotMail)
@@ -24,4 +24,4 @@ If you have any questions, comments, or want to contribute, you can reach me on 
 ##License
 DotMail is available under the MIT open source license.  See LICENSE.md for more details.
 
-Please don’t distribute us commercially without prior consent!
+Please don’t distribute commercially without prior consent!
