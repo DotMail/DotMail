@@ -70,7 +70,7 @@
 - (void)setSelection:(PSTFolderType)selection {
 	_selection = selection;
 	if (selection == PSTFolderTypeNextSteps) {
-		[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateCount) name:PSTMailAccountActionStepCountUpdated object:self.account.mainAccount];
+		[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateCount) name:PSTMailAccountActionStepCountUpdated object:nil];
 	}
 	[self _update];
 }

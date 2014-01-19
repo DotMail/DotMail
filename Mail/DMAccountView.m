@@ -42,9 +42,7 @@
 	[self setNeedsLayout];
 }
 
-- (void)_updateCount {
-	
-}
+- (void)_updateCount { }
 
 - (void)setSelected:(BOOL)selected {
 	self.backgroundColor = selected ? [NSColor colorWithCalibratedRed:0.109 green:0.120 blue:0.129 alpha:1.000] : [NSColor colorWithCalibratedRed:0.142 green:0.157 blue:0.169 alpha:1.000];
