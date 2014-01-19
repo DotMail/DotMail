@@ -169,6 +169,8 @@
 		8484CD1F17836C0200BADED6 /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8484CD1E17836C0200BADED6 /* NSString+HTMLEntities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		848991AD15E97E9300F458DA /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848991AC15E97E9300F458DA /* ApplicationServices.framework */; };
 		848B998515DC3E3A00B3AFC3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848B998415DC3E3900B3AFC3 /* MainMenu.xib */; };
+		8490492A188B80F800061BC4 /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84818D3717599A3100D3E208 /* MailCore.framework */; };
+		8490493A188B80FA00061BC4 /* Puissant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; };
 		84937C39160D529200584425 /* DMConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8462711D15C47E9C0043D02E /* DMConversationListController.m */; };
 		8497A15C160AA32A00D2AEF4 /* DMAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497A15B160AA32A00D2AEF4 /* DMAboutWindowController.m */; };
 		8499C6E417964EEC008849BF /* DMActivityProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499C6E317964EEC008849BF /* DMActivityProgressView.m */; };
@@ -178,7 +180,6 @@
 		849D5FB816827B390001372F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849D5FB716827B390001372F /* IOKit.framework */; };
 		849E9155174ED182005FAB56 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 849E9154174ED182005FAB56 /* INWindowButton.m */; };
 		849E915E174ED7C3005FAB56 /* JNWCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E9136174ECE53005FAB56 /* JNWCollectionView.framework */; };
-		849E9163174ED7C3005FAB56 /* Puissant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E9162174ED7C3005FAB56 /* Puissant.framework */; };
 		849E916A174ED840005FAB56 /* JNWCollectionView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E9136174ECE53005FAB56 /* JNWCollectionView.framework */; };
 		849E917B174ED940005FAB56 /* MoonShine.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E912E174ECE53005FAB56 /* MoonShine.framework */; };
 		849E917C174ED94C005FAB56 /* MoonShine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E912E174ECE53005FAB56 /* MoonShine.framework */; };
@@ -186,8 +187,6 @@
 		84A62DEA178C9EFA00698265 /* DMPreferencesButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A62DE9178C9EFA00698265 /* DMPreferencesButton.m */; };
 		84A9E0F41628F365006737FA /* DMBasicAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E0F31628F365006737FA /* DMBasicAssistantViewController.m */; };
 		84A9E0F71628F374006737FA /* DMIMAPAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E0F61628F374006737FA /* DMIMAPAssistantViewController.m */; };
-		84AC22AF177424E0009C79CD /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84818D3717599A3100D3E208 /* MailCore.framework */; };
-		84AC22B117742521009C79CD /* MailCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84818D3717599A3100D3E208 /* MailCore.framework */; };
 		84B07A10178385B500EED11D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844001891767B1F400D747B9 /* XCTest.framework */; };
 		84B07A16178385B500EED11D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84B07A14178385B500EED11D /* InfoPlist.strings */; };
 		84B238311669D060003B442A /* DMRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B238301669D060003B442A /* DMRefreshControl.m */; };
@@ -299,6 +298,13 @@
 			remoteGlobalIDString = 1860F430177C91B500C7B3C9;
 			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHostTests";
 		};
+		8490493B188B811B00061BC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C261F11638AE2B00A64818;
+			remoteInfo = Puissant;
+		};
 		849E9123174ECE53005FAB56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
@@ -397,13 +403,6 @@
 			remoteGlobalIDString = 840477D71739EE4F009E8A81;
 			remoteInfo = PuissantTests;
 		};
-		84B7CCE0187F7E92006DCD80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 84C261F11638AE2B00A64818;
-			remoteInfo = Puissant;
-		};
 		84B7CCF8187F8020006DCD80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
@@ -429,7 +428,6 @@
 			files = (
 				84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */,
 				842F4093179B67550092CBD6 /* TwUI.framework in CopyFiles */,
-				84AC22B117742521009C79CD /* MailCore.framework in CopyFiles */,
 				849E916A174ED840005FAB56 /* JNWCollectionView.framework in CopyFiles */,
 				849E917B174ED940005FAB56 /* MoonShine.framework in CopyFiles */,
 				84B7CCDC187F7E54006DCD80 /* ReactiveCocoa.framework in CopyFiles */,
@@ -821,7 +819,6 @@
 			files = (
 				842F4092179B67480092CBD6 /* TwUI.framework in Frameworks */,
 				84273AC1178CB35600C40276 /* CoreText.framework in Frameworks */,
-				84AC22AF177424E0009C79CD /* MailCore.framework in Frameworks */,
 				849E915E174ED7C3005FAB56 /* JNWCollectionView.framework in Frameworks */,
 				849E917C174ED94C005FAB56 /* MoonShine.framework in Frameworks */,
 				842276611723AB4600EE1B59 /* QuickLook.framework in Frameworks */,
@@ -836,7 +833,8 @@
 				843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */,
 				8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */,
 				84B7CCFA187F8036006DCD80 /* ReactiveCocoa.framework in Frameworks */,
-				849E9163174ED7C3005FAB56 /* Puissant.framework in Frameworks */,
+				8490492A188B80F800061BC4 /* MailCore.framework in Frameworks */,
+				8490493A188B80FA00061BC4 /* Puissant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1647,7 +1645,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				84B7CCE1187F7E92006DCD80 /* PBXTargetDependency */,
+				8490493C188B811B00061BC4 /* PBXTargetDependency */,
 				84B7CCF9187F8020006DCD80 /* PBXTargetDependency */,
 				842F4091179B67410092CBD6 /* PBXTargetDependency */,
 				849E9159174ED7B2005FAB56 /* PBXTargetDependency */,
@@ -2120,6 +2118,11 @@
 			name = TwUI;
 			targetProxy = 842F4090179B67410092CBD6 /* PBXContainerItemProxy */;
 		};
+		8490493C188B811B00061BC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Puissant;
+			targetProxy = 8490493B188B811B00061BC4 /* PBXContainerItemProxy */;
+		};
 		849E9159174ED7B2005FAB56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MoonShine;
@@ -2134,11 +2137,6 @@
 			isa = PBXTargetDependency;
 			target = 8437494E15AD11F400157F9C /* DotMail */;
 			targetProxy = 84B07A1A178385B500EED11D /* PBXContainerItemProxy */;
-		};
-		84B7CCE1187F7E92006DCD80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Puissant;
-			targetProxy = 84B7CCE0187F7E92006DCD80 /* PBXContainerItemProxy */;
 		};
 		84B7CCF9187F8020006DCD80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
