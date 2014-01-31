@@ -8,7 +8,7 @@
 - Run 
 
 ```Shell
-$ git clone —recursive https://github.com/DotMail/DotMail.git; git submodule update -i —-recursive
+$ git clone --recursive https://github.com/DotMail/DotMail.git ; cd DotMail ;  git submodule update -i --recursive
 ```
 
 - After all the dependencies have been resolved and downloaded, open the enclosed Xcode Project.
