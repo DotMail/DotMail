@@ -102,6 +102,7 @@
 		840BF875183DAA830061E528 /* new_message.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 840BF874183DAA830061E528 /* new_message.mustache */; };
 		840BF877183DAE520061E528 /* composer.css in Resources */ = {isa = PBXBuildFile; fileRef = 840BF876183DAE520061E528 /* composer.css */; };
 		840BF879183DAED30061E528 /* composer.js in Resources */ = {isa = PBXBuildFile; fileRef = 840BF878183DAED30061E528 /* composer.js */; };
+		840CAD1918CCEE5300EC4BFB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B7CCC3187D0C5B006DCD80 /* ReactiveCocoa.framework */; };
 		840E4EE515F42937007C986B /* DMMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E4EE415F42937007C986B /* DMMainWindowController.m */; };
 		840E4EE815F42D8D007C986B /* DMMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E4EE715F42D8D007C986B /* DMMainWindow.m */; };
 		840F1B65178C952300E1262C /* DMPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F1B64178C952300E1262C /* DMPreferencesWindowController.m */; };
@@ -196,7 +197,6 @@
 		84B639E017EFB83D003B5BA2 /* DMLayeredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B639DF17EFB83D003B5BA2 /* DMLayeredImageView.m */; };
 		84B71A2E1881F0070013D89E /* DMOrganizeFolderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */; };
 		84B71A3F1881F0360013D89E /* DMOrganizeAccountCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */; };
-		84B7CCDC187F7E54006DCD80 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */; };
 		84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; };
 		84BF393D18149AA800AEF072 /* DMAccountSetupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393C18149AA800AEF072 /* DMAccountSetupWindow.m */; };
 		84BF394018149DED00AEF072 /* DMWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393F18149DED00AEF072 /* DMWelcomeViewController.m */; };
@@ -276,54 +276,12 @@
 			remoteGlobalIDString = CB5B264B13BE6DA200579B1E;
 			remoteInfo = TwUI;
 		};
-		844001801767B1DC00D747B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5FAF5223174D4C2000CAC810;
-			remoteInfo = "ReactiveCocoaTests-iOS";
-		};
-		8478741117E3BC51008D2A0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1860F412177C91B500C7B3C9;
-			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHost";
-		};
-		8478741317E3BC51008D2A0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1860F430177C91B500C7B3C9;
-			remoteInfo = "ReactiveCocoa-iOS-UIKitTestHostTests";
-		};
 		8490493B188B811B00061BC4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 84C261F11638AE2B00A64818;
 			remoteInfo = Puissant;
-		};
-		849E9123174ECE53005FAB56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88037F8315056328001A5B19;
-			remoteInfo = ReactiveCocoa;
-		};
-		849E9125174ECE53005FAB56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88F440AB153DAC820097B4C3;
-			remoteInfo = "ReactiveCocoa-iOS";
-		};
-		849E9127174ECE53005FAB56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88CDF7DC15000FCF00163A9F;
-			remoteInfo = ReactiveCocoaTests;
 		};
 		849E912D174ECE53005FAB56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -402,13 +360,6 @@
 			remoteGlobalIDString = 840477D71739EE4F009E8A81;
 			remoteInfo = PuissantTests;
 		};
-		84FD08011880FC6D00B52D82 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D05AD39417F2D56F0080895B;
-			remoteInfo = "ReactiveCocoa-Mac";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -422,7 +373,6 @@
 				842F4093179B67550092CBD6 /* TwUI.framework in CopyFiles */,
 				849E916A174ED840005FAB56 /* JNWCollectionView.framework in CopyFiles */,
 				849E917B174ED940005FAB56 /* MoonShine.framework in CopyFiles */,
-				84B7CCDC187F7E54006DCD80 /* ReactiveCocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +602,6 @@
 		8474F3EF15C0753D007D90A8 /* DMSecureTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSecureTextFieldCell.h; sourceTree = "<group>"; };
 		8474F3F015C0753D007D90A8 /* DMSecureTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSecureTextFieldCell.m; sourceTree = "<group>"; };
 		847749C817443FEB00CA311B /* JNWCollectionView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JNWCollectionView.xcodeproj; path = ../External/JNWCollectionView/JNWCollectionView.xcodeproj; sourceTree = "<group>"; };
-		847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ../External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		8478740417E3BC50008D2A0C /* DMPullToRefreshScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPullToRefreshScrollView.h; sourceTree = "<group>"; };
 		8478740517E3BC50008D2A0C /* DMPullToRefreshScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPullToRefreshScrollView.m; sourceTree = "<group>"; };
 		8478741817E3C4C2008D2A0C /* DMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLabel.h; sourceTree = "<group>"; };
@@ -809,6 +758,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840CAD1918CCEE5300EC4BFB /* ReactiveCocoa.framework in Frameworks */,
 				842F4092179B67480092CBD6 /* TwUI.framework in Frameworks */,
 				84273AC1178CB35600C40276 /* CoreText.framework in Frameworks */,
 				849E915E174ED7C3005FAB56 /* JNWCollectionView.framework in Frameworks */,
@@ -1208,7 +1158,6 @@
 			children = (
 				84984901187CB9560077A7BF /* Puissant.xcodeproj */,
 				84696F441747146500CD689E /* MoonShine.xcodeproj */,
-				847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */,
 				847749C817443FEB00CA311B /* JNWCollectionView.xcodeproj */,
 				842F407F179B67240092CBD6 /* TwUI.xcodeproj */,
 				849E9102174ECE41005FAB56 /* Configuration */,
@@ -1284,20 +1233,6 @@
 				849E9116174ECE41005FAB56 /* Mac-StaticLibrary.xcconfig */,
 			);
 			path = "Mac OS X";
-			sourceTree = "<group>";
-		};
-		849E911E174ECE53005FAB56 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */,
-				849E9126174ECE53005FAB56 /* libReactiveCocoa-iOS.a */,
-				849E9128174ECE53005FAB56 /* ReactiveCocoaTests.octest */,
-				844001811767B1DC00D747B9 /* ReactiveCocoaTests-iOS.octest */,
-				8478741217E3BC51008D2A0C /* ReactiveCocoa-iOS-UIKitTestHost.app */,
-				8478741417E3BC51008D2A0C /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */,
-				84FD08021880FC6D00B52D82 /* libReactiveCocoa-Mac.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		849E9129174ECE53005FAB56 /* Products */ = {
@@ -1708,10 +1643,6 @@
 					ProjectRef = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
 				},
 				{
-					ProductGroup = 849E911E174ECE53005FAB56 /* Products */;
-					ProjectRef = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-				},
-				{
 					ProductGroup = 842F4080179B67240092CBD6 /* Products */;
 					ProjectRef = 842F407F179B67240092CBD6 /* TwUI.xcodeproj */;
 				},
@@ -1751,48 +1682,6 @@
 			fileType = wrapper.cfbundle;
 			path = Tests.octest;
 			remoteRef = 842F408E179B67250092CBD6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		844001811767B1DC00D747B9 /* ReactiveCocoaTests-iOS.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveCocoaTests-iOS.octest";
-			remoteRef = 844001801767B1DC00D747B9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8478741217E3BC51008D2A0C /* ReactiveCocoa-iOS-UIKitTestHost.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "ReactiveCocoa-iOS-UIKitTestHost.app";
-			remoteRef = 8478741117E3BC51008D2A0C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8478741417E3BC51008D2A0C /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveCocoa-iOS-UIKitTestHostTests.octest";
-			remoteRef = 8478741317E3BC51008D2A0C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = 849E9123174ECE53005FAB56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		849E9126174ECE53005FAB56 /* libReactiveCocoa-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libReactiveCocoa-iOS.a";
-			remoteRef = 849E9125174ECE53005FAB56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		849E9128174ECE53005FAB56 /* ReactiveCocoaTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveCocoaTests.octest;
-			remoteRef = 849E9127174ECE53005FAB56 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		849E912E174ECE53005FAB56 /* MoonShine.framework */ = {
@@ -1849,13 +1738,6 @@
 			fileType = wrapper.cfbundle;
 			path = PuissantTests.xctest;
 			remoteRef = 84B7CCDA187D0CE0006DCD80 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		84FD08021880FC6D00B52D82 /* libReactiveCocoa-Mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libReactiveCocoa-Mac.a";
-			remoteRef = 84FD08011880FC6D00B52D82 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2229,10 +2111,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Mail/DotMail-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/External/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -2276,10 +2155,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Mail/DotMail-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/External/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -2345,10 +2221,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Mail/DotMail-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/External/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -2421,10 +2294,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "Mail/DotMail-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/External/**",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
