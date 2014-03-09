@@ -82,6 +82,4 @@
 	[[NSApp mainWindow] makeKeyAndOrderFront:self];
 }
 
-
-
 @end

@@ -198,7 +198,6 @@
 		84B71A3F1881F0360013D89E /* DMOrganizeAccountCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */; };
 		84B7CCDC187F7E54006DCD80 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */; };
 		84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; };
-		84B7CCFA187F8036006DCD80 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E9124174ECE53005FAB56 /* ReactiveCocoa.framework */; };
 		84BF393D18149AA800AEF072 /* DMAccountSetupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393C18149AA800AEF072 /* DMAccountSetupWindow.m */; };
 		84BF394018149DED00AEF072 /* DMWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393F18149DED00AEF072 /* DMWelcomeViewController.m */; };
 		84C197A3168FA51300AA9A80 /* label-colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C197A2168FA51300AA9A80 /* label-colors.plist */; };
@@ -402,13 +401,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 840477D71739EE4F009E8A81;
 			remoteInfo = PuissantTests;
-		};
-		84B7CCF8187F8020006DCD80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 847749E117443FF900CA311B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 88037F8215056328001A5B19;
-			remoteInfo = ReactiveCocoa;
 		};
 		84FD08011880FC6D00B52D82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -832,7 +824,6 @@
 				8425753A15BB28DE0006D808 /* AddressBook.framework in Frameworks */,
 				843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */,
 				8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */,
-				84B7CCFA187F8036006DCD80 /* ReactiveCocoa.framework in Frameworks */,
 				8490492A188B80F800061BC4 /* MailCore.framework in Frameworks */,
 				8490493A188B80FA00061BC4 /* Puissant.framework in Frameworks */,
 			);
@@ -1646,7 +1637,6 @@
 			);
 			dependencies = (
 				8490493C188B811B00061BC4 /* PBXTargetDependency */,
-				84B7CCF9187F8020006DCD80 /* PBXTargetDependency */,
 				842F4091179B67410092CBD6 /* PBXTargetDependency */,
 				849E9159174ED7B2005FAB56 /* PBXTargetDependency */,
 				849E915B174ED7B2005FAB56 /* PBXTargetDependency */,
@@ -2137,11 +2127,6 @@
 			isa = PBXTargetDependency;
 			target = 8437494E15AD11F400157F9C /* DotMail */;
 			targetProxy = 84B07A1A178385B500EED11D /* PBXContainerItemProxy */;
-		};
-		84B7CCF9187F8020006DCD80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReactiveCocoa;
-			targetProxy = 84B7CCF8187F8020006DCD80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

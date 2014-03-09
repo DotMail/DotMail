@@ -162,7 +162,7 @@
 			metaProgressBar.frame = (CGRect){ .size.width = CGRectGetWidth(frame) * self.topActivity.metaPercentValue, .size.height = 6 };
 		}
 	};
-	
+
 	return self;
 }
 

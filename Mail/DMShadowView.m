@@ -34,8 +34,8 @@ static const CGFloat locations[] = {
 	[dropShadow setShadowOffset:NSMakeSize(5, 3.f)];
 	[dropShadow setShadowBlurRadius:3.0];
 	
-	[self setWantsLayer: YES];
-	[self setShadow: dropShadow];		
+	[self setWantsLayer:YES];
+	[self setShadow:dropShadow];		
 
 	return self;
 }
