@@ -11,7 +11,6 @@
 #import "DMWindowErrorBanner.h"
 #import "DMMainViewController.h"
 
-
 @interface DMMainWindow ()
 
 @property (nonatomic, strong) DMWindowErrorBanner *errorBanner;
