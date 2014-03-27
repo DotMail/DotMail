@@ -141,7 +141,9 @@ static const NSInteger kAccountsTableViewTag = 101;
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
 	NSTableView *tableView = (NSTableView *)notification.object;
 	if (tableView.tag == kAccountsTableViewTag && tableView.selectedRow < (NSInteger)PSTAccountManager.defaultManager.accounts.count) {
-		self.selectedAccount = PSTAccountManager.defaultManager.accounts[tableView.selectedRow];
+		if (tableView.selectedRow != NSIntegerMax) {
+			self.selectedAccount = PSTAccountManager.defaultManager.accounts[tableView.selectedRow];
+		}
 	} else {
 		NSRect selectedRect = CGRectOffset([tableView rectOfRow:tableView.selectedRow], 0, [tableView.enclosingScrollView documentVisibleRect].origin.y + 10);
 		_colorWell.frame = selectedRect;

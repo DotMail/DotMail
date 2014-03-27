@@ -30,7 +30,7 @@
 	self = [super init];
 	
 	DMDeployUpdateTokenIfNecessary();
-	
+
 	[MSHUpdater.standardUpdater beginAutomaticUpdateChecksAtInterval:300];
 	[MCOMailProvidersManager sharedManager];
 	[[PSTAccountManager defaultManager]initializeAccounts];
@@ -158,6 +158,8 @@
 }
 
 #pragma mark - Actions
+
+- (IBAction)refreshAllMail:(id)sender {}
 
 - (IBAction)showAboutPanel:(id)sender {
 	[self.aboutWindowController.window center];

@@ -65,6 +65,8 @@
 
 @interface DMAppDelegate (DMMenuActions)
 
+- (IBAction)refreshAllMail:(id)sender;
+
 - (IBAction)replyMessage:(id)sender;
 - (IBAction)replyAllMessage:(id)sender;
 
