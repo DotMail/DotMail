@@ -30,6 +30,8 @@
 @property (nonatomic, strong) CALayer *currentRendering;
 @property (nonatomic, assign) BOOL animating;
 
+@property (nonatomic, strong) DMMainWindow *window;
+
 @end
 
 @implementation DMMainWindowController
