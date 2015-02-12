@@ -110,13 +110,13 @@
  */
 
 - (IBAction)toggleBoldSelectedText:(NSControl *)sender {
-	NSMenuItem *boldMenu = [[NSApp delegate]boldButton];
+	NSMenuItem *boldMenu = [(DMAppDelegate *)[NSApp delegate] boldButton];
 	[boldMenu.menu cancelTracking];
 	[boldMenu.menu performActionForItemAtIndex:1];
 }
 
 - (IBAction)toggleItalicSelectedText:(id)sender {
-	NSMenuItem *boldMenu = [[NSApp delegate]boldButton];
+	NSMenuItem *boldMenu = [(DMAppDelegate *)[NSApp delegate]boldButton];
 	[boldMenu.menu cancelTracking];
 	[boldMenu.menu performActionForItemAtIndex:2];
 }
