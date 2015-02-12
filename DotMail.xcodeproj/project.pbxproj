@@ -127,7 +127,7 @@
 		842EBDB916D9A3E400A0BCE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842EBDB816D9A3E400A0BCE9 /* Security.framework */; };
 		842F32DC179E1B50003E8893 /* DMAttachmentImageBrowserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F32DB179E1B50003E8893 /* DMAttachmentImageBrowserItem.m */; };
 		842F4092179B67480092CBD6 /* TwUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842F4089179B67250092CBD6 /* TwUI.framework */; };
-		842F4093179B67550092CBD6 /* TwUI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842F4089179B67250092CBD6 /* TwUI.framework */; };
+		842F4093179B67550092CBD6 /* TwUI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842F4089179B67250092CBD6 /* TwUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8436C7E8175D674000835D7A /* DMComposerDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7E6175D674000835D7A /* DMComposerDocument.m */; };
 		8436C804175DC95C00835D7A /* DMAttachmentsBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C803175DC95C00835D7A /* DMAttachmentsBrowser.m */; };
 		8436E5AB15CF892800BFB33D /* DMAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436E5AA15CF892800BFB33D /* DMAttachmentCell.m */; };
@@ -181,8 +181,8 @@
 		849D5FB816827B390001372F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849D5FB716827B390001372F /* IOKit.framework */; };
 		849E9155174ED182005FAB56 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 849E9154174ED182005FAB56 /* INWindowButton.m */; };
 		849E915E174ED7C3005FAB56 /* JNWCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E9136174ECE53005FAB56 /* JNWCollectionView.framework */; };
-		849E916A174ED840005FAB56 /* JNWCollectionView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E9136174ECE53005FAB56 /* JNWCollectionView.framework */; };
-		849E917B174ED940005FAB56 /* MoonShine.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E912E174ECE53005FAB56 /* MoonShine.framework */; };
+		849E916A174ED840005FAB56 /* JNWCollectionView.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E9136174ECE53005FAB56 /* JNWCollectionView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		849E917B174ED940005FAB56 /* MoonShine.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849E912E174ECE53005FAB56 /* MoonShine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		849E917C174ED94C005FAB56 /* MoonShine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E912E174ECE53005FAB56 /* MoonShine.framework */; };
 		84A62DE7178C9E3600698265 /* DMGeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A62DE6178C9E3600698265 /* DMGeneralPreferencesViewController.m */; };
 		84A62DEA178C9EFA00698265 /* DMPreferencesButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A62DE9178C9EFA00698265 /* DMPreferencesButton.m */; };
@@ -197,7 +197,7 @@
 		84B639E017EFB83D003B5BA2 /* DMLayeredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B639DF17EFB83D003B5BA2 /* DMLayeredImageView.m */; };
 		84B71A2E1881F0070013D89E /* DMOrganizeFolderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */; };
 		84B71A3F1881F0360013D89E /* DMOrganizeAccountCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */; };
-		84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; };
+		84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		84BF393D18149AA800AEF072 /* DMAccountSetupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393C18149AA800AEF072 /* DMAccountSetupWindow.m */; };
 		84BF394018149DED00AEF072 /* DMWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393F18149DED00AEF072 /* DMWelcomeViewController.m */; };
 		84C197A3168FA51300AA9A80 /* label-colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C197A2168FA51300AA9A80 /* label-colors.plist */; };
@@ -1606,7 +1606,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DM;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "CodaFi Inc.";
 				TargetAttributes = {
 					8437494E15AD11F400157F9C = {
@@ -2039,8 +2039,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -2068,9 +2070,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2178,9 +2182,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2244,8 +2250,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
