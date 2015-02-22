@@ -104,11 +104,13 @@
 - (void)switchView:(id)sender animate:(BOOL)animateFlag {
 	NSInteger selectedTab;
 	
-	if([sender isKindOfClass:[NSButton class]])
+	if ([sender isKindOfClass:[NSButton class]]) {
 		selectedTab = [sender tag];
-	else if([sender isKindOfClass:[NSNumber class]])
+	} else if ([sender isKindOfClass:[NSNumber class]]) {
 		selectedTab = [sender integerValue];
-	else return;
+	} else {
+		return;
+	}
 	
 	DMAssistantViewController *currentPane = [self selectedPreferencePane];
 	DMAssistantViewController *nextPane    = [[self preferencePanes] objectAtIndex:selectedTab];

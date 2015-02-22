@@ -37,8 +37,6 @@
 - (IBAction)replyMessage:(id)sender;
 - (IBAction)replyAllMessage:(id)sender;
 
-- (DMMainWindow *)window;
-
 - (void)selectMailbox:(PSTFolderType)mailbox;
 - (IBAction)selectPreviousAccount:(id)sender;
 - (IBAction)selectNextAccount:(id)sender;

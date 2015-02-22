@@ -43,7 +43,7 @@
 - (void)mouseUp:(NSEvent *)theEvent {
 	self.layer.backgroundColor = self.backgroundColor.CGColor;
 	[self.layer setNeedsDisplay];
-	objc_msgSend(self.target, self.action);
+	objc_msgSend(self.target, self.action, self);
 }
 
 - (void)setTitle:(NSString *)aString {

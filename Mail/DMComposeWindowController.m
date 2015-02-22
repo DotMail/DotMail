@@ -35,7 +35,7 @@
 
 - (instancetype)init {
 	self = [super init];
-	
+
 	NSUInteger windowMask = (NSTitledWindowMask  | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask);
 	self.window = [[NSWindow alloc]initWithContentRect:(NSRect){ .origin = { 196, 240 }, .size = { 750, 500 } } styleMask:windowMask backing:NSBackingStoreBuffered defer:NO];
 	self.window.minSize = NSMakeSize(750, 500);
@@ -45,19 +45,19 @@
 //	[self.window setLevel:CGWindowLevelForKey([self.delegate windowLevelForCurrentState])];
 	self.shouldCascadeWindows = YES;
 	self.shouldCloseDocument = YES;
-	
+
 	return self;
 }
 
 - (instancetype)initWithMode:(DMComposerMode)mode {
 	self = [self init];
-	
+
 	return self;
 }
 
 - (instancetype)initWithFilename:(NSString*)filename {
 	self = [self init];
-	
+
 	MCOMessageParser *msgparser = [[MCOMessageParser alloc]initWithData:[NSData dataWithContentsOfFile:filename]];
 //	[msgparser htmlRenderingWithDelegate:nil];
 	[self.subjectField setStringValue:msgparser.header.subject ? msgparser.header.subject : @""];
@@ -110,19 +110,19 @@
  */
 
 - (IBAction)toggleBoldSelectedText:(NSControl *)sender {
-	NSMenuItem *boldMenu = [[NSApp delegate]boldButton];
+	NSMenuItem *boldMenu = [(DMAppDelegate *)[NSApp delegate] boldButton];
 	[boldMenu.menu cancelTracking];
 	[boldMenu.menu performActionForItemAtIndex:1];
 }
 
 - (IBAction)toggleItalicSelectedText:(id)sender {
-	NSMenuItem *boldMenu = [[NSApp delegate]boldButton];
+	NSMenuItem *boldMenu = [(DMAppDelegate *)[NSApp delegate] boldButton];
 	[boldMenu.menu cancelTracking];
 	[boldMenu.menu performActionForItemAtIndex:2];
 }
 
 - (IBAction)addLink:(id)sender {
-	
+
 }
 
 - (void)textViewDidChangeSelection:(NSNotification *)notification {
@@ -222,7 +222,7 @@
 
 //- (void)_cancelScheduledSave {
 //	if (self.scheduledSave) {
-//		
+//
 //	}
 //	self.scheduledSave = NO;
 //	[NSObject cancelPreviousPerformRequestsWithTarget:self  selector:@selector(_saveAfterDelay) object:nil];

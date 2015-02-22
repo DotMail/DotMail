@@ -16,7 +16,7 @@
 {
     NSString* key = [theEvent charactersIgnoringModifiers];
     if([key isEqual:@" "]) {
-        [[NSApp delegate] togglePreviewPanel:self];
+        [(DMAppDelegate *)[NSApp delegate] togglePreviewPanel:self];
     } else {
 		[super keyDown:theEvent];
 		switch (theEvent.keyCode) {

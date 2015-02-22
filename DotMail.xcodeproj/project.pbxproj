@@ -918,6 +918,7 @@
 				8437495015AD11F400157F9C /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		8437495015AD11F400157F9C /* Products */ = {
 			isa = PBXGroup;
