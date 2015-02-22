@@ -9,6 +9,7 @@
 
 ```Shell
 $ git clone --recursive https://github.com/DotMail/DotMail.git ; cd DotMail ;  git submodule update -i --recursive
+$ ./External/Puissant/External/ReactiveCocoa/script/bootstrap
 ```
 
 - After all the dependencies have been resolved and downloaded, open the enclosed Xcode Project.
