@@ -1,7 +1,6 @@
 [submodule "External/JNWCollectionView"]
 	path = External/JNWCollectionView
 	url = https://github.com/jwilling/JNWCollectionView.git
-    ignore = dirty
 [submodule "External/MoonShine"]
 	path = External/MoonShine
 	url = https://github.com/DotMail/MoonShine.git
@@ -17,7 +16,6 @@
 [submodule "External/TwUI"]
 	path = External/TwUI
 	url = https://github.com/CodaFi/twui.git
-    ignore = dirty
 [submodule "External/Puissant"]
 	path = External/Puissant
 	url = https://github.com/DotMail/Puissant.git
