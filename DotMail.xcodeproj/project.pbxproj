@@ -171,9 +171,9 @@
 		848991AD15E97E9300F458DA /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848991AC15E97E9300F458DA /* ApplicationServices.framework */; };
 		848B998515DC3E3A00B3AFC3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848B998415DC3E3900B3AFC3 /* MainMenu.xib */; };
 		8490492A188B80F800061BC4 /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84818D3717599A3100D3E208 /* MailCore.framework */; };
-		8490493A188B80FA00061BC4 /* Puissant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; };
 		84937C39160D529200584425 /* DMConversationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8462711D15C47E9C0043D02E /* DMConversationListController.m */; };
 		8497A15C160AA32A00D2AEF4 /* DMAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497A15B160AA32A00D2AEF4 /* DMAboutWindowController.m */; };
+		8498966F1A99A04900ED6762 /* Puissant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849896661A99A03500ED6762 /* Puissant.framework */; };
 		8499C6E417964EEC008849BF /* DMActivityProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499C6E317964EEC008849BF /* DMActivityProgressView.m */; };
 		8499DD1C15B0E0BF006A4B61 /* DMFontMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD1B15B0E0BF006A4B61 /* DMFontMenu.m */; };
 		8499DD5B15B4F273006A4B61 /* DMMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD5A15B4F272006A4B61 /* DMMessageCell.m */; };
@@ -197,7 +197,6 @@
 		84B639E017EFB83D003B5BA2 /* DMLayeredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B639DF17EFB83D003B5BA2 /* DMLayeredImageView.m */; };
 		84B71A2E1881F0070013D89E /* DMOrganizeFolderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */; };
 		84B71A3F1881F0360013D89E /* DMOrganizeAccountCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B71A3E1881F0360013D89E /* DMOrganizeAccountCellView.m */; };
-		84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B7CCD5187D0CE0006DCD80 /* Puissant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		84BF393D18149AA800AEF072 /* DMAccountSetupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393C18149AA800AEF072 /* DMAccountSetupWindow.m */; };
 		84BF394018149DED00AEF072 /* DMWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BF393F18149DED00AEF072 /* DMWelcomeViewController.m */; };
 		84C197A3168FA51300AA9A80 /* label-colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C197A2168FA51300AA9A80 /* label-colors.plist */; };
@@ -276,9 +275,37 @@
 			remoteGlobalIDString = CB5B264B13BE6DA200579B1E;
 			remoteInfo = TwUI;
 		};
-		8490493B188B811B00061BC4 /* PBXContainerItemProxy */ = {
+		849896651A99A03500ED6762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
+			containerPortal = 849896591A99A03400ED6762 /* Puissant.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84C261F21638AE2B00A64818;
+			remoteInfo = Puissant;
+		};
+		849896671A99A03500ED6762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849896591A99A03400ED6762 /* Puissant.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84B74E691754744100158CA4;
+			remoteInfo = "Puissant-iOS";
+		};
+		849896691A99A03500ED6762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849896591A99A03400ED6762 /* Puissant.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84C0890C16FA7A6B005ABB3E;
+			remoteInfo = levelDB;
+		};
+		8498966B1A99A03500ED6762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849896591A99A03400ED6762 /* Puissant.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 840477D71739EE4F009E8A81;
+			remoteInfo = PuissantTests;
+		};
+		8498966D1A99A03E00ED6762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849896591A99A03400ED6762 /* Puissant.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 84C261F11638AE2B00A64818;
 			remoteInfo = Puissant;
@@ -332,34 +359,6 @@
 			remoteGlobalIDString = 8437494E15AD11F400157F9C;
 			remoteInfo = DotMail;
 		};
-		84B7CCD4187D0CE0006DCD80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 84C261F21638AE2B00A64818;
-			remoteInfo = Puissant;
-		};
-		84B7CCD6187D0CE0006DCD80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 84B74E691754744100158CA4;
-			remoteInfo = "Puissant-iOS";
-		};
-		84B7CCD8187D0CE0006DCD80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 84C0890C16FA7A6B005ABB3E;
-			remoteInfo = levelDB;
-		};
-		84B7CCDA187D0CE0006DCD80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 840477D71739EE4F009E8A81;
-			remoteInfo = PuissantTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -369,7 +368,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84B7CCDD187F7E5A006DCD80 /* Puissant.framework in CopyFiles */,
 				842F4093179B67550092CBD6 /* TwUI.framework in CopyFiles */,
 				849E916A174ED840005FAB56 /* JNWCollectionView.framework in CopyFiles */,
 				849E917B174ED940005FAB56 /* MoonShine.framework in CopyFiles */,
@@ -621,7 +619,7 @@
 		848B998415DC3E3900B3AFC3 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		8497A15A160AA32A00D2AEF4 /* DMAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DMAboutWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8497A15B160AA32A00D2AEF4 /* DMAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAboutWindowController.m; sourceTree = "<group>"; };
-		84984901187CB9560077A7BF /* Puissant.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Puissant.xcodeproj; path = ../External/Puissant/Puissant.xcodeproj; sourceTree = "<group>"; };
+		849896591A99A03400ED6762 /* Puissant.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Puissant.xcodeproj; path = External/Puissant/Puissant.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8499C6E217964EEC008849BF /* DMActivityProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityProgressView.h; sourceTree = "<group>"; };
 		8499C6E317964EEC008849BF /* DMActivityProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityProgressView.m; sourceTree = "<group>"; };
 		8499DD1A15B0E0BF006A4B61 /* DMFontMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DMFontMenu.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -758,6 +756,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498966F1A99A04900ED6762 /* Puissant.framework in Frameworks */,
 				840CAD1918CCEE5300EC4BFB /* ReactiveCocoa.framework in Frameworks */,
 				842F4092179B67480092CBD6 /* TwUI.framework in Frameworks */,
 				84273AC1178CB35600C40276 /* CoreText.framework in Frameworks */,
@@ -775,7 +774,6 @@
 				843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */,
 				8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */,
 				8490492A188B80F800061BC4 /* MailCore.framework in Frameworks */,
-				8490493A188B80FA00061BC4 /* Puissant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,10 +1152,21 @@
 			name = "NSString+HTML";
 			sourceTree = "<group>";
 		};
+		8498965A1A99A03400ED6762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849896661A99A03500ED6762 /* Puissant.framework */,
+				849896681A99A03500ED6762 /* libPuissant-iOS.a */,
+				8498966A1A99A03500ED6762 /* liblevelDB.a */,
+				8498966C1A99A03500ED6762 /* PuissantTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		849E90F2174ECD66005FAB56 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				84984901187CB9560077A7BF /* Puissant.xcodeproj */,
+				849896591A99A03400ED6762 /* Puissant.xcodeproj */,
 				84696F441747146500CD689E /* MoonShine.xcodeproj */,
 				847749C817443FEB00CA311B /* JNWCollectionView.xcodeproj */,
 				842F407F179B67240092CBD6 /* TwUI.xcodeproj */,
@@ -1303,17 +1312,6 @@
 				84B71A2D1881F0070013D89E /* DMOrganizeFolderCellView.m */,
 			);
 			name = Organize;
-			sourceTree = "<group>";
-		};
-		84B7CCCE187D0CE0006DCD80 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				84B7CCD5187D0CE0006DCD80 /* Puissant.framework */,
-				84B7CCD7187D0CE0006DCD80 /* libPuissant-iOS.a */,
-				84B7CCD9187D0CE0006DCD80 /* liblevelDB.a */,
-				84B7CCDB187D0CE0006DCD80 /* PuissantTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		84B7CCFB1880F056006DCD80 /* Style */ = {
@@ -1572,7 +1570,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8490493C188B811B00061BC4 /* PBXTargetDependency */,
+				8498966E1A99A03E00ED6762 /* PBXTargetDependency */,
 				842F4091179B67410092CBD6 /* PBXTargetDependency */,
 				849E9159174ED7B2005FAB56 /* PBXTargetDependency */,
 				849E915B174ED7B2005FAB56 /* PBXTargetDependency */,
@@ -1640,8 +1638,8 @@
 					ProjectRef = 84696F441747146500CD689E /* MoonShine.xcodeproj */;
 				},
 				{
-					ProductGroup = 84B7CCCE187D0CE0006DCD80 /* Products */;
-					ProjectRef = 84984901187CB9560077A7BF /* Puissant.xcodeproj */;
+					ProductGroup = 8498965A1A99A03400ED6762 /* Products */;
+					ProjectRef = 849896591A99A03400ED6762 /* Puissant.xcodeproj */;
 				},
 				{
 					ProductGroup = 842F4080179B67240092CBD6 /* Products */;
@@ -1685,6 +1683,34 @@
 			remoteRef = 842F408E179B67250092CBD6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		849896661A99A03500ED6762 /* Puissant.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Puissant.framework;
+			remoteRef = 849896651A99A03500ED6762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		849896681A99A03500ED6762 /* libPuissant-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPuissant-iOS.a";
+			remoteRef = 849896671A99A03500ED6762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8498966A1A99A03500ED6762 /* liblevelDB.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblevelDB.a;
+			remoteRef = 849896691A99A03500ED6762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8498966C1A99A03500ED6762 /* PuissantTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PuissantTests.xctest;
+			remoteRef = 8498966B1A99A03500ED6762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		849E912E174ECE53005FAB56 /* MoonShine.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1711,34 +1737,6 @@
 			fileType = wrapper.cfbundle;
 			path = JNWCollectionViewTests.octest;
 			remoteRef = 849E9137174ECE53005FAB56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		84B7CCD5187D0CE0006DCD80 /* Puissant.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Puissant.framework;
-			remoteRef = 84B7CCD4187D0CE0006DCD80 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		84B7CCD7187D0CE0006DCD80 /* libPuissant-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libPuissant-iOS.a";
-			remoteRef = 84B7CCD6187D0CE0006DCD80 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		84B7CCD9187D0CE0006DCD80 /* liblevelDB.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = liblevelDB.a;
-			remoteRef = 84B7CCD8187D0CE0006DCD80 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		84B7CCDB187D0CE0006DCD80 /* PuissantTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PuissantTests.xctest;
-			remoteRef = 84B7CCDA187D0CE0006DCD80 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1991,10 +1989,10 @@
 			name = TwUI;
 			targetProxy = 842F4090179B67410092CBD6 /* PBXContainerItemProxy */;
 		};
-		8490493C188B811B00061BC4 /* PBXTargetDependency */ = {
+		8498966E1A99A03E00ED6762 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Puissant;
-			targetProxy = 8490493B188B811B00061BC4 /* PBXContainerItemProxy */;
+			targetProxy = 8498966D1A99A03E00ED6762 /* PBXContainerItemProxy */;
 		};
 		849E9159174ED7B2005FAB56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
